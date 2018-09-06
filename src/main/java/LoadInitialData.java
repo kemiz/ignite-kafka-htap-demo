@@ -12,5 +12,6 @@ public class LoadInitialData {
         igniteInitialDataLoader.startIgnite();
         igniteInitialDataLoader.loadInitialMarketData();
         igniteInitialDataLoader.loadInitialUserData();
+        igniteInitialDataLoader.stopIgnite();
     }
 }

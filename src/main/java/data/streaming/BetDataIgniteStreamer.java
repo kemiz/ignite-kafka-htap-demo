@@ -9,11 +9,15 @@ import org.apache.ignite.configuration.IgniteConfiguration;
 import org.apache.ignite.spi.discovery.tcp.TcpDiscoverySpi;
 import org.apache.ignite.spi.discovery.tcp.ipfinder.vm.TcpDiscoveryVmIpFinder;
 import org.apache.ignite.stream.kafka.KafkaStreamer;
+import tool.IgniteConfigHelper;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.Arrays;
 import java.util.Properties;
+
+import static tool.IgniteConfigHelper.BET_CACHE;
+import static tool.IgniteConfigHelper.getIgniteClientConfig;
 
 public class BetDataIgniteStreamer {
 
@@ -21,18 +25,8 @@ public class BetDataIgniteStreamer {
 
     public BetDataIgniteStreamer() throws UnknownHostException {
 
-        IgniteConfiguration cfg = new IgniteConfiguration();
-        cfg.setClientMode(true);
-
-        /** Ignite discovery config**/
-        TcpDiscoverySpi spi = new TcpDiscoverySpi();
-        TcpDiscoveryVmIpFinder ipFinder = new TcpDiscoveryVmIpFinder();
-        ipFinder.setAddresses(Arrays.asList("127.0.0.1:47500..47509"));
-        spi.setIpFinder(ipFinder);
-        cfg.setDiscoverySpi(spi);
-
         /** Start Ignite **/
-        Ignite ignite = Ignition.start(cfg);
+        Ignite ignite = Ignition.start(getIgniteClientConfig());
 
         /** Setup Kafka consumer **/
         Properties config = new Properties();
@@ -54,7 +48,7 @@ public class BetDataIgniteStreamer {
 
         /** Setup Kafka-Ignite Streamer **/
         kafkaStreamer = new KafkaStreamer<>();
-        IgniteDataStreamer<String, Bet> stmr = ignite.dataStreamer("BetCache");
+        IgniteDataStreamer<String, Bet> stmr = ignite.dataStreamer(BET_CACHE);
         stmr.allowOverwrite(true);
         kafkaStreamer.setIgnite(ignite);
         kafkaStreamer.setStreamer(stmr);

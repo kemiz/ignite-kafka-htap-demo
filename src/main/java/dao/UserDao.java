@@ -3,10 +3,9 @@ package dao;
 import data.model.User;
 import org.apache.ignite.Ignite;
 import org.apache.ignite.IgniteCache;
-
+import static tool.IgniteConfigHelper.USER_CACHE;
 
 public class UserDao {
-    private final String USER_CACHE = "UserCache";
     private IgniteCache<Integer, User> userCache;
 
     public UserDao(Ignite ignite){

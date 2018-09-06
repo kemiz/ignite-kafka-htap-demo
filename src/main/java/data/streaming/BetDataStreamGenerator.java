@@ -12,10 +12,13 @@ import org.apache.ignite.spi.discovery.tcp.TcpDiscoverySpi;
 import org.apache.ignite.spi.discovery.tcp.ipfinder.vm.TcpDiscoveryVmIpFinder;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerRecord;
+import tool.IgniteConfigHelper;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.*;
+
+import static tool.IgniteConfigHelper.getIgniteClientConfig;
 
 public class BetDataStreamGenerator {
 
@@ -29,19 +32,8 @@ public class BetDataStreamGenerator {
 
     public BetDataStreamGenerator() throws UnknownHostException {
 
-        /** Setup Ignite **/
-        IgniteConfiguration cfg = new IgniteConfiguration();
-        cfg.setClientMode(true);
-
-        /** Ignite discovery config**/
-        TcpDiscoverySpi spi = new TcpDiscoverySpi();
-        TcpDiscoveryVmIpFinder ipFinder = new TcpDiscoveryVmIpFinder();
-        ipFinder.setAddresses(Arrays.asList("127.0.0.1:47500..47509"));
-        spi.setIpFinder(ipFinder);
-        cfg.setDiscoverySpi(spi);
-
         /** Start Ignite **/
-        Ignite ignite = Ignition.start(cfg);
+        Ignite ignite = Ignition.start(getIgniteClientConfig());
 
         /** Set DAOs **/
         this.marketDao = new MarketDao(ignite);

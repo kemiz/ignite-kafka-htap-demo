@@ -1,17 +1,13 @@
 package data.loading;
 
-import data.model.Bet;
 import data.model.Market;
 import data.model.User;
 import org.apache.ignite.Ignite;
 import org.apache.ignite.Ignition;
-import org.apache.ignite.cache.CacheAtomicityMode;
-import org.apache.ignite.cache.CacheMode;
-import org.apache.ignite.cache.CacheWriteSynchronizationMode;
-import org.apache.ignite.configuration.CacheConfiguration;
 import org.apache.ignite.configuration.IgniteConfiguration;
 import org.apache.ignite.spi.discovery.tcp.TcpDiscoverySpi;
 import org.apache.ignite.spi.discovery.tcp.ipfinder.vm.TcpDiscoveryVmIpFinder;
+import tool.IgniteConfigHelper;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -27,15 +23,7 @@ public class IgniteInitialDataLoader {
     }
 
     public void startIgnite() {
-        IgniteConfiguration cfg = new IgniteConfiguration();
-        cfg.setClientMode(true);
-
-        /** Ignite discovery config**/
-        TcpDiscoverySpi spi = new TcpDiscoverySpi();
-        TcpDiscoveryVmIpFinder ipFinder = new TcpDiscoveryVmIpFinder();
-        ipFinder.setAddresses(Arrays.asList("127.0.0.1:47500..47509"));
-        spi.setIpFinder(ipFinder);
-        cfg.setDiscoverySpi(spi);
+        IgniteConfiguration cfg = IgniteConfigHelper.getIgniteClientConfig();
 
         /** Start Ignite **/
         ignite = Ignition.start(cfg);
@@ -75,5 +63,9 @@ public class IgniteInitialDataLoader {
         users.add(new User(4, "Mike Dully"));
         users.add(new User(5, "John Conway"));
         return users;
+    }
+
+    public void stopIgnite() {
+        ignite.close();
     }
 }

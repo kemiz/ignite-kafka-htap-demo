@@ -1,7 +1,6 @@
 package data.streaming;
 
 import data.model.Bet;
-import data.model.Market;
 import kafka.message.MessageAndMetadata;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -24,10 +23,7 @@ public class BetMultipleTupleExtractor implements StreamMultipleTupleExtractor {
         try {
 
             MessageAndMetadata<byte[], byte[]> msg = (MessageAndMetadata<byte[], byte[]>) input;
-            String key = new String(msg.key());
             String val = new String(msg.message());
-//            System.out.println("key=" + key);
-//            System.out.println("val=" + val);
             Bet bet = extractBetTransaction(val);
             System.out.println(bet);
             entries.put(bet.getId(), bet);

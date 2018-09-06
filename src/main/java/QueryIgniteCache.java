@@ -10,9 +10,9 @@ import org.apache.ignite.spi.discovery.tcp.ipfinder.vm.TcpDiscoveryVmIpFinder;
 import javax.cache.Cache;
 import java.util.Arrays;
 
-public class QueryIgniteCache {
+import static tool.IgniteConfigHelper.BET_CACHE;
 
-    private static final String BET_CACHE = "BetCache";
+public class QueryIgniteCache {
 
     public static void main (String... args){
         IgniteConfiguration cfg = new IgniteConfiguration();
