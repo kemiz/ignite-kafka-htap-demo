@@ -22,11 +22,12 @@ public class KafkaInitialDataLoader {
     private static final String USER_TOPIC = "UserTopic";
     private final MarketDao marketDao;
     private final UserDao userDao;
+    private final KafkaProducer<Integer, User> userProducer;
+    private final Ignite ignite;
 
     public KafkaInitialDataLoader() throws UnknownHostException {
-
         /** Start Ignite **/
-        Ignite ignite = Ignition.start(getIgniteClientConfig());
+        ignite = Ignition.start(getIgniteClientConfig());
 
         /** Set DAOs **/
         this.marketDao = new MarketDao(ignite);
@@ -44,21 +45,14 @@ public class KafkaInitialDataLoader {
         config.put("key.deserializer", "org.apache.kafka.common.serialization.IntegerDeserializer");
         config.put("value.deserializer", "serialization.UserDeserializer");
 
-        IgniteCache<Integer, User> userCache = ignite.cache(IgniteConfigHelper.USER_CACHE);
-        KafkaProducer<Integer, User> userProducer = new KafkaProducer<>(config);
-
-        for (int i = 0; i < userCache.size(); i++) {
-            User user = userCache.get(i);
-            userProducer.send(new ProducerRecord<>(USER_TOPIC, user.getId(), user));
-        }
+        userProducer = new KafkaProducer<>(config);
     }
 
-    public static void main(String[] args) {
-        try {
-            KafkaInitialDataLoader initialDataLoader = new KafkaInitialDataLoader();
-        } catch (UnknownHostException e) {
-            e.printStackTrace();
+    public void load() {
+        for (int i = 0; i < userDao.getUserCount(); i++) {
+            User user = userDao.getUserById(i);
+            userProducer.send(new ProducerRecord<>(USER_TOPIC, user.getId(), user));
         }
-
+        this.ignite.close();
     }
 }

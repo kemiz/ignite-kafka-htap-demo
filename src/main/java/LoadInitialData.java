@@ -1,18 +1,16 @@
 import load.IgniteInitialDataLoader;
+import load.KafkaInitialDataLoader;
+
+import java.net.UnknownHostException;
 
 /**
- * Loads initial data into Ignite cache
- * - Users
- * - Bet Markets
- * -
+ * Loads initial data into Ignite cache & Kafka topics
+ * - User & Bet Market data
  */
 public class LoadInitialData {
 
-    public static void main (String... args){
-        IgniteInitialDataLoader igniteInitialDataLoader = new IgniteInitialDataLoader();
-        igniteInitialDataLoader.startIgnite();
-        igniteInitialDataLoader.loadInitialMarketData();
-        igniteInitialDataLoader.loadInitialUserData();
-        igniteInitialDataLoader.stopIgnite();
+    public static void main (String... args) throws UnknownHostException {
+        new IgniteInitialDataLoader().load();
+        new KafkaInitialDataLoader().load();
     }
 }

@@ -15,4 +15,12 @@ public class UserDao {
     public User getUserById(int userId) {
         return userCache.get(userId);
     }
+
+    public int getUserCount() {
+        return userCache.size();
+    }
+
+    public void addUser(User user) {
+        userCache.put(user.getId(), user);
+    }
 }

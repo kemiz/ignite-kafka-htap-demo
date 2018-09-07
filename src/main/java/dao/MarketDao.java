@@ -17,4 +17,8 @@ public class MarketDao {
     public Market getMarketById(int marketId) {
         return marketCache.get(marketId);
     }
+
+    public void addMarket(Market market) {
+        this.marketCache.put(market.getId(), market);
+    }
 }
