@@ -1,9 +1,17 @@
-package data.model;
+package model;
+
+import org.apache.ignite.cache.query.annotations.QuerySqlField;
 
 public class Market {
+
+    @QuerySqlField
     private int id;
+
+    @QuerySqlField
     private String market;
-    double odds;
+
+    @QuerySqlField
+    private double odds;
 
     public Market(int id, String market, double odds) {
         this.id = id;
@@ -38,9 +46,9 @@ public class Market {
     @Override
     public String toString() {
         return "Market{" +
-                "id=" + id +
-                ", market='" + market + '\'' +
-                ", odds=" + odds +
+                "id:" + id +
+                ", market:'" + market + '\'' +
+                ", odds:" + odds +
                 '}';
     }
 }

@@ -1,8 +1,13 @@
-package data.model;
+package model;
+
+import org.apache.ignite.cache.query.annotations.QuerySqlField;
 
 public class User {
 
+    @QuerySqlField
     private int id;
+
+    @QuerySqlField
     private String name;
 
     public User(int id, String name) {
@@ -29,8 +34,8 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
+                "id:" + id +
+                ", name:'" + name + '\'' +
                 '}';
     }
 

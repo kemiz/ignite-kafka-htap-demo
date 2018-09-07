@@ -1,4 +1,4 @@
-import data.model.Bet;
+import model.Bet;
 import org.apache.ignite.Ignite;
 import org.apache.ignite.Ignition;
 import org.apache.ignite.cache.query.QueryCursor;
@@ -10,7 +10,7 @@ import org.apache.ignite.spi.discovery.tcp.ipfinder.vm.TcpDiscoveryVmIpFinder;
 import javax.cache.Cache;
 import java.util.Arrays;
 
-import static tool.IgniteConfigHelper.BET_CACHE;
+import static utils.IgniteConfigHelper.BET_CACHE;
 
 public class QueryIgniteCache {
 

@@ -1,10 +1,10 @@
 package dao;
 
-import data.model.Market;
+import model.Market;
 import org.apache.ignite.Ignite;
 import org.apache.ignite.IgniteCache;
 
-import static tool.IgniteConfigHelper.MARKET_CACHE;
+import static utils.IgniteConfigHelper.MARKET_CACHE;
 
 public class MarketDao {
 

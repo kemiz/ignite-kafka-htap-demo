@@ -1,7 +1,7 @@
-package data.serialization;
+package serialization;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import data.model.Bet;
+import model.Bet;
 import org.apache.kafka.common.serialization.Serializer;
 import java.util.Map;
 

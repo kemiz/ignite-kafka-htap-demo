@@ -1,6 +1,6 @@
-package data.streaming;
+package streaming;
 
-import data.model.Bet;
+import model.Bet;
 import kafka.message.MessageAndMetadata;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

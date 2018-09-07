@@ -1,6 +1,6 @@
 import org.apache.ignite.Ignition;
 
-import static tool.IgniteConfigHelper.getIgniteServerConfig;
+import static utils.IgniteConfigHelper.getIgniteServerConfig;
 
 public class StartIgniteServerNode {
 

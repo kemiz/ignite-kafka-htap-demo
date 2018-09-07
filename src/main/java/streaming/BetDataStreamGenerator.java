@@ -1,25 +1,24 @@
-package data.streaming;
+package streaming;
 
 import dao.MarketDao;
 import dao.UserDao;
-import data.model.Bet;
-import data.model.Market;
-import data.model.User;
+import model.Bet;
+import model.Market;
+import model.User;
 import org.apache.ignite.Ignite;
 import org.apache.ignite.Ignition;
-import org.apache.ignite.configuration.IgniteConfiguration;
-import org.apache.ignite.spi.discovery.tcp.TcpDiscoverySpi;
-import org.apache.ignite.spi.discovery.tcp.ipfinder.vm.TcpDiscoveryVmIpFinder;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerRecord;
-import tool.IgniteConfigHelper;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.*;
 
-import static tool.IgniteConfigHelper.getIgniteClientConfig;
+import static utils.IgniteConfigHelper.getIgniteClientConfig;
 
+/**
+ * Generates stream of bet placement data and publishes to kafka topic
+ */
 public class BetDataStreamGenerator {
 
     private static final String TOPIC = "BetTopic";
@@ -47,9 +46,9 @@ public class BetDataStreamGenerator {
         config.put("zookeeper.connect", "127.0.0.1");
         config.put("acks", "all");
         config.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
-        config.put("value.serializer", "data.serialization.BetSerializer");
+        config.put("value.serializer", "serialization.BetSerializer");
         config.put("key.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
-        config.put("value.deserializer", "data.serialization.BetDeserializer");
+        config.put("value.deserializer", "serialization.BetDeserializer");
         this.betProducer = new KafkaProducer<>(config);
     }
 
@@ -58,6 +57,7 @@ public class BetDataStreamGenerator {
      */
     public void start(){
         while (!done) {
+            // Generate a random bet and publish it the kafka topic
             Bet bet = generateRandomBet();
             betProducer.send(new ProducerRecord<>(TOPIC, bet.getId(), bet));
             try {

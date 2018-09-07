@@ -1,10 +1,11 @@
-import dao.MarketDao;
-import dao.UserDao;
-import data.loading.IgniteInitialDataLoader;
-import data.streaming.BetDataStreamGenerator;
+import load.IgniteInitialDataLoader;
 
-import java.net.UnknownHostException;
-
+/**
+ * Loads initial data into Ignite cache
+ * - Users
+ * - Bet Markets
+ * -
+ */
 public class LoadInitialData {
 
     public static void main (String... args){

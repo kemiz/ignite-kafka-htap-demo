@@ -1,23 +1,18 @@
-package data.streaming;
+package streaming;
 
-import data.model.Bet;
+import model.Bet;
 import kafka.consumer.ConsumerConfig;
 import org.apache.ignite.Ignite;
 import org.apache.ignite.IgniteDataStreamer;
 import org.apache.ignite.Ignition;
-import org.apache.ignite.configuration.IgniteConfiguration;
-import org.apache.ignite.spi.discovery.tcp.TcpDiscoverySpi;
-import org.apache.ignite.spi.discovery.tcp.ipfinder.vm.TcpDiscoveryVmIpFinder;
 import org.apache.ignite.stream.kafka.KafkaStreamer;
-import tool.IgniteConfigHelper;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
-import java.util.Arrays;
 import java.util.Properties;
 
-import static tool.IgniteConfigHelper.BET_CACHE;
-import static tool.IgniteConfigHelper.getIgniteClientConfig;
+import static utils.IgniteConfigHelper.BET_CACHE;
+import static utils.IgniteConfigHelper.getIgniteClientConfig;
 
 public class BetDataIgniteStreamer {
 
@@ -34,9 +29,9 @@ public class BetDataIgniteStreamer {
         config.put("bootstrap.servers", "localhost:9092");
         config.put("acks", "all");
         config.put("key.serializer", "org.apache.kafka.common.serialization.LongSerializer");
-        config.put("value.serializer", "data.serialization.BetSerializer");
+        config.put("value.serializer", "serialization.BetSerializer");
         config.put("key.deserializer", "org.apache.kafka.common.serialization.LongDeserializer");
-        config.put("value.deserializer", "data.serialization.BetDeserializer");
+        config.put("value.deserializer", "serialization.BetDeserializer");
         config.put("zookeeper.connect", "127.0.0.1");
         config.put("group.id", "demo-group");
         config.put("enable.auto.commit", "true");
@@ -50,6 +45,7 @@ public class BetDataIgniteStreamer {
         kafkaStreamer = new KafkaStreamer<>();
         IgniteDataStreamer<String, Bet> stmr = ignite.dataStreamer(BET_CACHE);
         stmr.allowOverwrite(true);
+        // Set the Ignite instance that we weill be using
         kafkaStreamer.setIgnite(ignite);
         kafkaStreamer.setStreamer(stmr);
         kafkaStreamer.setTopic("BetTopic");

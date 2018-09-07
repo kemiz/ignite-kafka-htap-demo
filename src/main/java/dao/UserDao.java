@@ -1,9 +1,9 @@
 package dao;
 
-import data.model.User;
+import model.User;
 import org.apache.ignite.Ignite;
 import org.apache.ignite.IgniteCache;
-import static tool.IgniteConfigHelper.USER_CACHE;
+import static utils.IgniteConfigHelper.USER_CACHE;
 
 public class UserDao {
     private IgniteCache<Integer, User> userCache;
