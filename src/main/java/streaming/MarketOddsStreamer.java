@@ -11,12 +11,19 @@ public class MarketOddsStreamer {
 
     ArrayList<Market> markets = DataGenerator.getBetMarketData();
 
+    /**
+     * @return the top 5 markets based on bet frequency
+     */
     private ArrayList<Market> getTop5Markets(){
         Collections.shuffle(markets, new Random(System.nanoTime()));
         ArrayList<Market> top5 = new ArrayList<>(markets.subList(0, 2));
         return top5;
     }
 
+    /**
+     * Takes the top 5 markets and adjusts the odds.
+     * Top markets odds are lowered
+     */
     public void adjustMarketOdds(){
         for (Market market : markets) {
             System.out.println(market);
