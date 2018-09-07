@@ -2,43 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="807432e2-5f6c-416c-9ca3-9e8349e00882" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/utils/DataGenerator.java" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/LoadInitialData.java" afterPath="$PROJECT_DIR$/src/main/java/LoadInitialData.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/QueryIgniteCache.java" afterPath="$PROJECT_DIR$/src/main/java/QueryIgniteCache.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/StartBetDataStream.java" afterPath="$PROJECT_DIR$/src/main/java/StartBetDataStream.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/StartIgniteBetDataStreamer.java" afterPath="$PROJECT_DIR$/src/main/java/StartIgniteBetDataStreamer.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/StartIgniteServerNode.java" afterPath="$PROJECT_DIR$/src/main/java/StartIgniteServerNode.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/MarketDao.java" afterPath="$PROJECT_DIR$/src/main/java/dao/MarketDao.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/UserDao.java" afterPath="$PROJECT_DIR$/src/main/java/dao/UserDao.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/loading/IgniteInitialDataLoader.java" afterPath="$PROJECT_DIR$/src/main/java/load/IgniteInitialDataLoader.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/model/Bet.java" afterPath="$PROJECT_DIR$/src/main/java/model/Bet.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/model/Market.java" afterPath="$PROJECT_DIR$/src/main/java/model/Market.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/model/User.java" afterPath="$PROJECT_DIR$/src/main/java/model/User.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/serialization/BetDeserializer.java" afterPath="$PROJECT_DIR$/src/main/java/serialization/BetDeserializer.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/serialization/BetSerializer.java" afterPath="$PROJECT_DIR$/src/main/java/serialization/BetSerializer.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/streaming/BetDataIgniteStreamer.java" afterPath="$PROJECT_DIR$/src/main/java/streaming/BetDataIgniteStreamer.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/streaming/BetDataStreamGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/streaming/BetDataStreamGenerator.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/streaming/BetMultipleTupleExtractor.java" afterPath="$PROJECT_DIR$/src/main/java/streaming/BetMultipleTupleExtractor.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/streaming/MarketOddsStreamer.java" afterPath="$PROJECT_DIR$/src/main/java/streaming/MarketOddsStreamer.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tool/IgniteConfigHelper.java" afterPath="$PROJECT_DIR$/src/main/java/utils/IgniteConfigHelper.java" />
-      <change beforePath="$PROJECT_DIR$/target/classes/LoadInitialData.class" afterPath="$PROJECT_DIR$/target/classes/LoadInitialData.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/QueryIgniteCache.class" afterPath="$PROJECT_DIR$/target/classes/QueryIgniteCache.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/StartBetDataStream.class" afterPath="$PROJECT_DIR$/target/classes/StartBetDataStream.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/StartIgniteBetDataStreamer.class" afterPath="$PROJECT_DIR$/target/classes/StartIgniteBetDataStreamer.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/StartIgniteServerNode.class" afterPath="$PROJECT_DIR$/target/classes/StartIgniteServerNode.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/MarketDao.class" afterPath="$PROJECT_DIR$/target/classes/dao/MarketDao.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/UserDao.class" afterPath="$PROJECT_DIR$/target/classes/dao/UserDao.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/data/loading/IgniteInitialDataLoader.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/data/model/Bet.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/data/model/Market.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/data/model/User.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/data/serialization/BetDeserializer.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/data/serialization/BetSerializer.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/data/streaming/BetDataIgniteStreamer.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/data/streaming/BetDataStreamGenerator.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/data/streaming/BetMultipleTupleExtractor.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/data/streaming/MarketOddsStreamer.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/streaming/BetMultipleTupleExtractor.java" afterPath="$PROJECT_DIR$/src/main/java/streaming/BetMultipleTupleExtractor.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/streaming/MarketOddsStreamer.java" afterPath="$PROJECT_DIR$/src/main/java/streaming/MarketOddsStreamer.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -123,9 +88,21 @@
       <file leaf-file-name="BetDataStreamGenerator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/streaming/BetDataStreamGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="73">
-              <caret line="43" column="56" lean-forward="false" selection-start-line="43" selection-start-column="56" selection-end-line="43" selection-end-column="56" />
+            <state relative-caret-position="263">
+              <caret line="58" column="16" lean-forward="true" selection-start-line="58" selection-start-column="16" selection-end-line="58" selection-end-column="16" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BetMultipleTupleExtractor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/streaming/BetMultipleTupleExtractor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-166">
+              <caret line="39" column="42" lean-forward="false" selection-start-line="39" selection-start-column="42" selection-end-line="39" selection-end-column="42" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -133,9 +110,11 @@
       <file leaf-file-name="MarketOddsStreamer.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/streaming/MarketOddsStreamer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="33" lean-forward="false" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
-              <folding />
+            <state relative-caret-position="312">
+              <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -146,26 +125,6 @@
             <state relative-caret-position="102">
               <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Bet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/model/Bet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="421">
-              <caret line="48" column="5" lean-forward="true" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#883#884#0" expanded="true" />
-                <element signature="e#912#913#0" expanded="true" />
-                <element signature="e#941#942#0" expanded="true" />
-                <element signature="e#966#967#0" expanded="true" />
-                <element signature="e#1012#1013#0" expanded="true" />
-                <element signature="e#1054#1055#0" expanded="true" />
-                <element signature="e#1086#1087#0" expanded="true" />
-                <element signature="e#1114#1115#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -240,6 +199,7 @@
         <option value="$PROJECT_DIR$/src/main/java/streaming/BetDataIgniteStreamer.java" />
         <option value="$PROJECT_DIR$/src/main/java/streaming/BetDataStreamGenerator.java" />
         <option value="$PROJECT_DIR$/src/main/java/streaming/MarketOddsStreamer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/streaming/BetMultipleTupleExtractor.java" />
       </list>
     </option>
   </component>
@@ -299,6 +259,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="online-betting-example" type="b2602c69:ProjectViewProjectNode" />
+              <item name="online-betting-example" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="online-betting-example" type="b2602c69:ProjectViewProjectNode" />
@@ -379,7 +347,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.LoadInitialData">
+  <component name="RunManager" selected="Application.MarketOddsStreamer">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -401,9 +369,14 @@
       <module name="online-betting-example" />
       <envs />
     </configuration>
-    <configuration name="QueryIgniteCache" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="QueryIgniteCache" />
+    <configuration name="MarketOddsStreamer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="streaming.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="streaming.MarketOddsStreamer" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -536,15 +509,15 @@
       <item index="1" class="java.lang.String" itemvalue="Application.LoadInitialData" />
       <item index="2" class="java.lang.String" itemvalue="Application.StartBetDataStream" />
       <item index="3" class="java.lang.String" itemvalue="Application.StartIgniteBetDataStreamer" />
-      <item index="4" class="java.lang.String" itemvalue="Application.QueryIgniteCache" />
+      <item index="4" class="java.lang.String" itemvalue="Application.MarketOddsStreamer" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.LoadInitialData" />
-        <item index="1" class="java.lang.String" itemvalue="Application.StartIgniteBetDataStreamer" />
-        <item index="2" class="java.lang.String" itemvalue="Application.StartBetDataStream" />
-        <item index="3" class="java.lang.String" itemvalue="Application.StartIgniteServerNode" />
-        <item index="4" class="java.lang.String" itemvalue="Application.QueryIgniteCache" />
+        <item index="0" class="java.lang.String" itemvalue="Application.MarketOddsStreamer" />
+        <item index="1" class="java.lang.String" itemvalue="Application.LoadInitialData" />
+        <item index="2" class="java.lang.String" itemvalue="Application.StartIgniteBetDataStreamer" />
+        <item index="3" class="java.lang.String" itemvalue="Application.StartBetDataStream" />
+        <item index="4" class="java.lang.String" itemvalue="Application.StartIgniteServerNode" />
       </list>
     </recent_temporary>
   </component>
@@ -569,6 +542,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="44" y="22" width="1396" height="878" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -578,12 +552,12 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39974457" sideWeight="0.5029542" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24521072" sideWeight="0.4970458" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32694763" sideWeight="0.4970458" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23338257" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23338257" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32950193" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24963072" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1040,16 +1014,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/streaming/BetMultipleTupleExtractor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="44" column="13" lean-forward="true" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/UserDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -1190,19 +1154,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/streaming/BetMultipleTupleExtractor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-166">
+          <caret line="39" column="42" lean-forward="false" selection-start-line="39" selection-start-column="42" selection-end-line="39" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/streaming/BetDataStreamGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="43" column="56" lean-forward="false" selection-start-line="43" selection-start-column="56" selection-end-line="43" selection-end-column="56" />
+        <state relative-caret-position="263">
+          <caret line="58" column="16" lean-forward="true" selection-start-line="58" selection-start-column="16" selection-end-line="58" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/streaming/MarketOddsStreamer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="33" lean-forward="false" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
-          <folding />
+        <state relative-caret-position="312">
+          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

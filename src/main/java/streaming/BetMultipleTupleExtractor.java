@@ -34,6 +34,11 @@ public class BetMultipleTupleExtractor implements StreamMultipleTupleExtractor {
         return entries;
     }
 
+    /**
+     * Extracts the Bet object from the kafka message
+     * @param message
+     * @return the unmarshalled Bet object
+     */
     private Bet extractBetTransaction(String message) {
         Bet outcome = null;
         try {
