@@ -7,6 +7,7 @@ import org.apache.ignite.Ignite;
 import org.apache.ignite.IgniteCache;
 import org.apache.ignite.Ignition;
 import org.apache.kafka.clients.producer.KafkaProducer;
+import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import scala.Int;
 import utils.IgniteConfigHelper;
@@ -35,13 +36,13 @@ public class KafkaInitialDataLoader {
 
         /** Setup Kafka Bet data producer **/
         Properties config = new Properties();
-        config.put("client.id", InetAddress.getLocalHost().getHostName());
-        config.put("bootstrap.servers", "localhost:9092");
+        config.put(ProducerConfig.CLIENT_ID_CONFIG, InetAddress.getLocalHost().getHostName());
+        config.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
         config.put("group.id", "demo-group");
         config.put("zookeeper.connect", "127.0.0.1");
-        config.put("acks", "all");
-        config.put("key.serializer", "org.apache.kafka.common.serialization.IntegerSerializer");
-        config.put("value.serializer", "serialization.UserSerializer");
+        config.put(ProducerConfig.ACKS_CONFIG, "all");
+        config.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.IntegerSerializer");
+        config.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, "serialization.UserSerializer");
         config.put("key.deserializer", "org.apache.kafka.common.serialization.IntegerDeserializer");
         config.put("value.deserializer", "serialization.UserDeserializer");
 
