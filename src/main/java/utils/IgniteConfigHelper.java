@@ -1,10 +1,12 @@
 package utils;
 
 import model.Bet;
+import model.Market;
 import model.User;
 import org.apache.ignite.cache.CacheAtomicityMode;
 import org.apache.ignite.cache.CacheMode;
 import org.apache.ignite.cache.CacheWriteSynchronizationMode;
+import org.apache.ignite.cache.affinity.AffinityKey;
 import org.apache.ignite.configuration.CacheConfiguration;
 import org.apache.ignite.configuration.IgniteConfiguration;
 import org.apache.ignite.spi.discovery.tcp.TcpDiscoverySpi;
@@ -43,12 +45,13 @@ public class IgniteConfigHelper {
         cfg.setDiscoverySpi(spi);
 
         /** Ignite cache config**/
-        CacheConfiguration<String, Bet> marketCacheCfg = new CacheConfiguration<>();
+        CacheConfiguration<String, Market> marketCacheCfg = new CacheConfiguration<>();
         marketCacheCfg.setName(MARKET_CACHE);
         marketCacheCfg.setAtomicityMode(CacheAtomicityMode.TRANSACTIONAL);
         marketCacheCfg.setWriteSynchronizationMode(CacheWriteSynchronizationMode.FULL_SYNC);
         marketCacheCfg.setCacheMode(CacheMode.PARTITIONED);
         marketCacheCfg.setBackups(1);
+        marketCacheCfg.setIndexedTypes(AffinityKey.class, Market.class);
         
         CacheConfiguration<Integer, User> userCacheCfg = new CacheConfiguration<>();
         userCacheCfg.setName(USER_CACHE);
@@ -56,6 +59,7 @@ public class IgniteConfigHelper {
         userCacheCfg.setWriteSynchronizationMode(CacheWriteSynchronizationMode.FULL_SYNC);
         userCacheCfg.setCacheMode(CacheMode.PARTITIONED);
         userCacheCfg.setBackups(1);
+        userCacheCfg.setIndexedTypes(AffinityKey.class, User.class);
 
         CacheConfiguration<Integer, Bet> betCacheCfg = new CacheConfiguration<>();
         betCacheCfg.setName(BET_CACHE);
@@ -63,6 +67,7 @@ public class IgniteConfigHelper {
         betCacheCfg.setWriteSynchronizationMode(CacheWriteSynchronizationMode.FULL_SYNC);
         betCacheCfg.setCacheMode(CacheMode.PARTITIONED);
         betCacheCfg.setBackups(1);
+        betCacheCfg.setIndexedTypes(AffinityKey.class, Bet.class);
 
         cfg.setCacheConfiguration(new CacheConfiguration[]{marketCacheCfg, userCacheCfg, betCacheCfg});
         return cfg;

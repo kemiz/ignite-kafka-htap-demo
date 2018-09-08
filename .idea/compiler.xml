@@ -10,6 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="ignite-kafka-streamer-betting-demo" target="1.8" />
       <module name="online-betting-example" target="1.8" />
     </bytecodeTargetLevel>
   </component>

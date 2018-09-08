@@ -1,4 +1,4 @@
-package streaming.kafka;
+package streaming;
 
 import org.apache.kafka.streams.StreamsConfig;
 

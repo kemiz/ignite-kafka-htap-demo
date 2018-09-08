@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="807432e2-5f6c-416c-9ca3-9e8349e00882" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/streaming/kafka/UserStakeAggregator.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/StartIgniteConsumers.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/consumer/IgniteBetConsumer.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/query/QueryIgnite.java" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_jpountz_lz4_lz4_1_3_0.xml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_scala_lang_modules_scala_parser_combinators_2_11_1_0_4.xml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_xerial_snappy_snappy_java_1_1_2_6.xml" afterPath="" />
@@ -10,14 +13,19 @@
       <change beforePath="$PROJECT_DIR$/online-betting-example.iml" afterPath="$PROJECT_DIR$/online-betting-example.iml" />
       <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/java/StartBetDataStream.java" afterPath="$PROJECT_DIR$/src/main/java/StartBetDataStream.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/StartIgniteBetDataStreamer.java" afterPath="$PROJECT_DIR$/src/main/java/StartIgniteBetDataStreamer.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/serialization/UserDeserializer.java" afterPath="$PROJECT_DIR$/src/main/java/serialization/UserDeserializer.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/streaming/BetDataIgniteStreamer.java" afterPath="$PROJECT_DIR$/src/main/java/streaming/ignite/BetDataIgniteStreamer.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/streaming/BetDataStreamGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/streaming/kafka/BetDataStreamGenerator.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/streaming/BetMultipleTupleExtractor.java" afterPath="$PROJECT_DIR$/src/main/java/streaming/BetMultipleTupleExtractor.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StartIgniteBetDataStreamer.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Bet.java" afterPath="$PROJECT_DIR$/src/main/java/model/Bet.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/User.java" afterPath="$PROJECT_DIR$/src/main/java/model/User.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/streaming/BetMultipleTupleExtractor.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/streaming/ignite/BetDataIgniteStreamer.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/streaming/kafka/BetDataStreamGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/producer/BetDataStreamGenerator.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/streaming/kafka/UserStakeAggregator.java" afterPath="$PROJECT_DIR$/src/main/java/streaming/UserStakeAggregator.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/IgniteConfigHelper.java" afterPath="$PROJECT_DIR$/src/main/java/utils/IgniteConfigHelper.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/ignite-kafka-streamer-betting-demo/target/" />
+    <ignored path="$PROJECT_DIR$/../ignite-kafka-streamer-betting-demo/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,11 +35,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BetMultipleTupleExtractor.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/streaming/BetMultipleTupleExtractor.java">
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/model/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="28" column="19" lean-forward="false" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="19" />
+            <state relative-caret-position="385">
+              <caret line="57" column="18" lean-forward="false" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="18" />
+              <folding>
+                <element signature="e#1063#1064#0" expanded="true" />
+                <element signature="e#1103#1104#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StartIgniteConsumers.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/StartIgniteConsumers.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -39,41 +60,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MarketOddsStreamer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/streaming/MarketOddsStreamer.java">
+      <file leaf-file-name="IgniteBetConsumer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/consumer/IgniteBetConsumer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="14" column="46" lean-forward="false" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
+            <state relative-caret-position="225">
+              <caret line="67" column="30" lean-forward="true" selection-start-line="67" selection-start-column="30" selection-end-line="67" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3006#3007#0" expanded="true" />
+                <element signature="e#3037#3038#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QueryIgnite.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/query/QueryIgnite.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="26" lean-forward="true" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StartBetDataStream.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/StartBetDataStream.java">
+      <file leaf-file-name="IgniteInitialDataLoader.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/load/IgniteInitialDataLoader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="12" column="79" lean-forward="false" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="79" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserStakeAggregator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/streaming/kafka/UserStakeAggregator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="24" lean-forward="false" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserSerializer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/serialization/UserSerializer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="13" column="42" lean-forward="false" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
+            <state relative-caret-position="259">
+              <caret line="42" column="45" lean-forward="false" selection-start-line="42" selection-start-column="45" selection-end-line="42" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -89,60 +104,58 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserDeserializer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/serialization/UserDeserializer.java">
+      <file leaf-file-name="DataGenerator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/utils/DataGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="23" column="29" lean-forward="false" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
+            <state relative-caret-position="225">
+              <caret line="31" column="39" lean-forward="false" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BetDataIgniteStreamer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/streaming/ignite/BetDataIgniteStreamer.java">
+      <file leaf-file-name="KafkaInitialDataLoader.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/load/KafkaInitialDataLoader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-336">
-              <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="17">
+              <caret line="23" column="38" lean-forward="false" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KafkaStreamer.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/ignite/ignite-kafka/2.6.0/ignite-kafka-2.6.0.jar!/org/apache/ignite/stream/kafka/KafkaStreamer.class">
+      <file leaf-file-name="IgniteConfigHelper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/utils/IgniteConfigHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="31" column="38" lean-forward="false" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="38" />
+            <state relative-caret-position="347">
+              <caret line="71" column="103" lean-forward="false" selection-start-line="71" selection-start-column="103" selection-end-line="71" selection-end-column="103" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Bet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/model/Bet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding>
-                <marker date="1536239269020" expanded="false" signature="0:104" ph="/.../" />
-                <marker date="1536239269020" expanded="false" signature="154:805" ph="..." />
-                <marker date="1536239269020" expanded="true" signature="1270:1277" ph="{}" />
-                <marker date="1536239269020" expanded="false" signature="1317:1328" ph=" { " />
-                <marker date="1536239269020" expanded="false" signature="1347:1353" ph=" }" />
-                <marker date="1536239269020" expanded="false" signature="1394:1405" ph=" { " />
-                <marker date="1536239269020" expanded="false" signature="1428:1434" ph=" }" />
-                <marker date="1536239269020" expanded="true" signature="1497:1508" ph=" { " />
-                <marker date="1536239269020" expanded="true" signature="1539:1545" ph=" }" />
-                <marker date="1536239269020" expanded="true" signature="1598:1704" ph="{...}" />
-                <marker date="1536239269020" expanded="true" signature="1730:4127" ph="{...}" />
-                <marker date="1536239269020" expanded="false" signature="2844:2896" ph="run() → {" />
-                <marker date="1536239269020" expanded="false" signature="4089:4108" ph="}" />
-                <marker date="1536239269020" expanded="true" signature="4152:4840" ph="{...}" />
+                <element signature="e#591#592#0" expanded="true" />
+                <element signature="e#616#617#0" expanded="true" />
+                <element signature="e#652#653#0" expanded="true" />
+                <element signature="e#680#681#0" expanded="true" />
+                <element signature="e#726#727#0" expanded="true" />
+                <element signature="e#756#757#0" expanded="true" />
+                <element signature="e#814#815#0" expanded="true" />
+                <element signature="e#852#853#0" expanded="true" />
+                <element signature="e#884#885#0" expanded="true" />
+                <element signature="e#912#913#0" expanded="true" />
+                <element signature="e#954#955#0" expanded="true" />
+                <element signature="e#988#989#0" expanded="true" />
+                <element signature="e#1018#1019#0" expanded="true" />
+                <element signature="e#1047#1048#0" expanded="true" />
+                <element signature="e#1088#1089#0" expanded="true" />
+                <element signature="e#1124#1125#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -168,17 +181,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/UserSerializer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/serialization/BetDeserializer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/serialization/BetSerializer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/MarketOddsStreamGenerator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/MarketDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/StaticDataLoader.java" />
-        <option value="$PROJECT_DIR$/src/main/java/InitialData.java" />
-        <option value="$PROJECT_DIR$/src/main/java/BetDataStreamGenerator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dataloading/IgniteInitialDataLoader.java" />
-        <option value="$PROJECT_DIR$/src/main/java/data/IgniteInitialDataLoader.java" />
-        <option value="$PROJECT_DIR$/src/main/java/data/loading/streaming/BetDataStreamGenerator.java" />
         <option value="$PROJECT_DIR$/src/main/java/data/BetDataStreamGenerator.java" />
         <option value="$PROJECT_DIR$/src/main/java/IgniteInitialDataLoader.java" />
         <option value="$PROJECT_DIR$/src/main/java/data/streaming/BetStreamMultipleTupleExtractor.java" />
@@ -193,12 +195,8 @@
         <option value="$PROJECT_DIR$/src/main/java/StartIgniteServerNode.java" />
         <option value="$PROJECT_DIR$/src/main/java/data/streaming/MarketOddsStreamer.java" />
         <option value="$PROJECT_DIR$/src/main/java/data/model/Bet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/utils/IgniteConfigHelper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/Market.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/Bet.java" />
         <option value="$PROJECT_DIR$/src/main/java/utils/DataGenerator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/StartBetDataStream.java" />
         <option value="$PROJECT_DIR$/src/main/java/StartIgniteBetDataStreamer.java" />
         <option value="$PROJECT_DIR$/src/main/java/streaming/BetDataIgniteStreamer.java" />
         <option value="$PROJECT_DIR$/src/main/java/streaming/BetDataStreamGenerator.java" />
@@ -215,10 +213,25 @@
         <option value="$PROJECT_DIR$/src/main/java/streaming/kafka/BetDataStreamGenerator.java" />
         <option value="$PROJECT_DIR$/src/main/java/serialization/UserDeserializer.java" />
         <option value="$PROJECT_DIR$/src/main/java/streaming/ignite/BetMultipleTupleExtractor.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/streaming/ignite/BetDataIgniteStreamer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/streaming/BetMultipleTupleExtractor.java" />
         <option value="$PROJECT_DIR$/src/main/java/streaming/kafka/UserStakeAggregator.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/streaming/BetMultipleTupleExtractor.java" />
+        <option value="$PROJECT_DIR$/../ignite-kafka-streamer-betting-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/../ignite-kafka-streamer-betting-demo/src/main/java/ignite/BetDataIgniteStreamer.java" />
+        <option value="$PROJECT_DIR$/../ignite-kafka-streamer-betting-demo/src/main/java/StartIgniteBetDataStreamer.java" />
+        <option value="$PROJECT_DIR$/../ignite-kafka-streamer-betting-demo/src/main/java/ignite/BetMultipleTupleExtractor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/IgniteKafkaConsumer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/producer/BetDataStreamGenerator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/consumer/IgniteKafkaConsumer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/consumer/IgniteConsumer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/streaming/UserStakeAggregator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/StartIgniteConsumers.java" />
+        <option value="$PROJECT_DIR$/src/main/java/StartBetDataStream.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/Bet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/utils/IgniteConfigHelper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/consumer/IgniteBetConsumer.java" />
       </list>
     </option>
   </component>
@@ -247,7 +260,7 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="45" />
-    <option name="y" value="202" />
+    <option name="y" value="22" />
     <option name="width" value="1396" />
     <option name="height" value="878" />
   </component>
@@ -292,55 +305,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="online-betting-example" type="b2602c69:ProjectViewProjectNode" />
-              <item name="online-betting-example" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="online-betting-example" type="b2602c69:ProjectViewProjectNode" />
-              <item name="online-betting-example" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="load" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="online-betting-example" type="b2602c69:ProjectViewProjectNode" />
-              <item name="online-betting-example" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="online-betting-example" type="b2602c69:ProjectViewProjectNode" />
-              <item name="online-betting-example" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="serialization" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="online-betting-example" type="b2602c69:ProjectViewProjectNode" />
-              <item name="online-betting-example" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="streaming" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="online-betting-example" type="b2602c69:ProjectViewProjectNode" />
-              <item name="online-betting-example" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="streaming" type="462c0819:PsiDirectoryNode" />
-              <item name="ignite" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -355,17 +319,21 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.28390804" />
-    <property name="settings.editor.selected.configurable" value="copyright" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
     <property name="extract.method.default.visibility" value="public" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../ignite-kafka-streamer-betting-demo/src/main/java/ignite" />
+      <recent name="$PROJECT_DIR$/../ignite-kafka-streamer-betting-demo/src/main/java" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
       <recent name="data" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="serialization" />
       <recent name="" />
+      <recent name="serialization" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="dao" />
@@ -384,7 +352,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.StartIgniteBetDataStreamer">
+  <component name="RunManager" selected="Application.StartIgniteConsumers">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -392,14 +360,9 @@
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <module />
     </configuration>
-    <configuration name="KafkaInitialDataLoader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="load.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="load.KafkaInitialDataLoader" />
+    <configuration name="IgniteBetConsumer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="consumer.IgniteBetConsumer" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -439,9 +402,9 @@
       <module name="online-betting-example" />
       <envs />
     </configuration>
-    <configuration name="StartIgniteBetDataStreamer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="StartIgniteConsumers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="StartIgniteBetDataStreamer" />
+      <option name="MAIN_CLASS_NAME" value="StartIgniteConsumers" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -543,18 +506,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Application.LoadInitialData" />
-      <item index="1" class="java.lang.String" itemvalue="Application.StartBetDataStream" />
-      <item index="2" class="java.lang.String" itemvalue="Application.StartIgniteBetDataStreamer" />
-      <item index="3" class="java.lang.String" itemvalue="Application.KafkaInitialDataLoader" />
-      <item index="4" class="java.lang.String" itemvalue="Application.StartIgniteServerNode" />
+      <item index="1" class="java.lang.String" itemvalue="Application.StartIgniteServerNode" />
+      <item index="2" class="java.lang.String" itemvalue="Application.IgniteBetConsumer" />
+      <item index="3" class="java.lang.String" itemvalue="Application.StartIgniteConsumers" />
+      <item index="4" class="java.lang.String" itemvalue="Application.StartBetDataStream" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.StartIgniteBetDataStreamer" />
+        <item index="0" class="java.lang.String" itemvalue="Application.StartIgniteConsumers" />
         <item index="1" class="java.lang.String" itemvalue="Application.StartBetDataStream" />
         <item index="2" class="java.lang.String" itemvalue="Application.LoadInitialData" />
         <item index="3" class="java.lang.String" itemvalue="Application.StartIgniteServerNode" />
-        <item index="4" class="java.lang.String" itemvalue="Application.KafkaInitialDataLoader" />
+        <item index="4" class="java.lang.String" itemvalue="Application.IgniteBetConsumer" />
       </list>
     </recent_temporary>
   </component>
@@ -579,6 +542,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="45" y="22" width="1396" height="878" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -588,7 +552,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39974457" sideWeight="0.5029542" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293944" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32694763" sideWeight="0.4970458" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32694763" sideWeight="0.4970458" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -624,83 +588,11 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="25" />
+      <option name="time" value="26" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/ignite/ignite-core/2.6.0/ignite-core-2.6.0.jar!/org/apache/ignite/IgniteCache.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="169" column="9" lean-forward="false" selection-start-line="169" selection-start-column="9" selection-end-line="169" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/ignite/ignite-core/2.6.0/ignite-core-2.6.0-sources.jar!/org/apache/ignite/internal/processors/cache/IgniteInternalCache.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="845" column="16" lean-forward="false" selection-start-line="845" selection-start-column="16" selection-end-line="845" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/ignite/ignite-core/2.6.0/ignite-core-2.6.0-sources.jar!/org/apache/ignite/internal/processors/cache/GridCacheAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="2823" column="27" lean-forward="false" selection-start-line="2820" selection-start-column="63" selection-end-line="2820" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/ignite/ignite-core/2.6.0/ignite-core-2.6.0-sources.jar!/org/apache/ignite/internal/processors/cache/distributed/near/GridNearTxLocal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-254">
-          <caret line="684" column="51" lean-forward="false" selection-start-line="684" selection-start-column="48" selection-end-line="684" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/serialization/BetSerializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/InitialData.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/ignite/ignite-core/2.6.0/ignite-core-2.6.0-sources.jar!/org/apache/ignite/configuration/IgniteConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="2133" column="0" lean-forward="false" selection-start-line="2133" selection-start-column="0" selection-end-line="2133" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/ignite/ignite-core/2.6.0/ignite-core-2.6.0-sources.jar!/org/apache/ignite/internal/processors/cache/GatewayProtectedCacheProxy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="604" column="0" lean-forward="false" selection-start-line="604" selection-start-column="0" selection-end-line="604" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka_2.11/0.10.0.1/kafka_2.11-0.10.0.1.jar!/kafka/consumer/ConsumerConfig.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="460" column="5" lean-forward="false" selection-start-line="460" selection-start-column="5" selection-end-line="460" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-clients/0.10.0.1/kafka-clients-0.10.0.1-sources.jar!/org/apache/kafka/clients/producer/KafkaProducer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="187" column="23" lean-forward="false" selection-start-line="187" selection-start-column="23" selection-end-line="187" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-clients/0.10.0.1/kafka-clients-0.10.0.1-sources.jar!/org/apache/kafka/clients/producer/ProducerConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1316">
-          <caret line="334" column="34" lean-forward="false" selection-start-line="334" selection-start-column="29" selection-end-line="334" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/ignite/ignite-core/2.6.0/ignite-core-2.6.0-sources.jar!/org/apache/ignite/stream/StreamAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="258">
@@ -717,31 +609,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/QueryIgniteCache.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Market.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="48" column="20" lean-forward="false" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/utils/IgniteConfigHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="19" column="24" lean-forward="false" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/utils/DataGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="13" column="25" lean-forward="false" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/ignite/ignite-core/2.6.0/ignite-core-2.6.0-sources.jar!/org/apache/ignite/internal/processors/cache/IgniteCacheProxyImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -760,6 +627,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="670">
           <caret line="664" column="19" lean-forward="false" selection-start-line="664" selection-start-column="9" selection-end-line="664" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -795,24 +663,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Bet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="704">
-          <caret line="48" column="5" lean-forward="false" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#883#884#0" expanded="false" />
-            <element signature="e#912#913#0" expanded="false" />
-            <element signature="e#941#942#0" expanded="false" />
-            <element signature="e#966#967#0" expanded="false" />
-            <element signature="e#1012#1013#0" expanded="false" />
-            <element signature="e#1054#1055#0" expanded="false" />
-            <element signature="e#1086#1087#0" expanded="false" />
-            <element signature="e#1114#1115#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-streams/0.11.0.3/kafka-streams-0.11.0.3.jar!/org/apache/kafka/streams/kstream/internals/KStreamTransformValues.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-271">
@@ -829,45 +679,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/processor/UserTotalStakeAccumulator.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/model/UserTotalStake.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/load/IgniteInitialDataLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="25" column="43" lean-forward="false" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/BetTransactionSummary.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-clients/0.11.0.3/kafka-clients-0.11.0.3.jar!/org/apache/kafka/clients/producer/ProducerConfig.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="218">
           <caret line="31" column="365" lean-forward="false" selection-start-line="31" selection-start-column="365" selection-end-line="31" selection-end-column="365" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/load/KafkaInitialDataLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-40">
-          <caret line="23" column="38" lean-forward="false" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/streaming/kafka/BetDataStreamGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -931,48 +747,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/StartIgniteBetDataStreamer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="65" lean-forward="false" selection-start-line="13" selection-start-column="65" selection-end-line="13" selection-end-column="65" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/StartIgniteServerNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/StartBetDataStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="12" column="79" lean-forward="false" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="79" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/LoadInitialData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="13" column="39" lean-forward="false" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/streaming/MarketOddsStreamer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="14" column="46" lean-forward="false" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka_2.11/0.11.0.3/kafka_2.11-0.11.0.3.jar!/kafka/consumer/ConsumerConfig.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="166">
@@ -981,10 +755,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="564" column="33" lean-forward="true" selection-start-line="564" selection-start-column="33" selection-end-line="564" selection-end-column="33" />
+          <folding>
+            <element signature="e#20771#20772#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/serialization/UserDeserializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/ignite/ignite-kafka/2.6.0/ignite-kafka-2.6.0.jar!/org/apache/ignite/stream/kafka/KafkaStreamer.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="31" column="38" lean-forward="false" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="38" />
+        <state relative-caret-position="151">
+          <caret line="47" column="16" lean-forward="false" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
           <folding>
             <marker date="1536239269020" expanded="false" signature="0:104" ph="/.../" />
             <marker date="1536239269020" expanded="false" signature="154:805" ph="..." />
@@ -1004,28 +798,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/ignite-kafka-streamer-betting-demo/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="23" column="29" lean-forward="false" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/src.zip!/java/lang/String.java">
+    <entry file="file://$PROJECT_DIR$/../ignite-kafka-streamer-betting-demo/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="564" column="33" lean-forward="true" selection-start-line="564" selection-start-column="33" selection-end-line="564" selection-end-column="33" />
-          <folding>
-            <element signature="e#20771#20772#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="-78">
+          <caret line="14" column="29" lean-forward="false" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/streaming/kafka/UserStakeAggregator.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/streaming/MarketOddsStreamer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="24" lean-forward="false" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+        <state relative-caret-position="17">
+          <caret line="14" column="46" lean-forward="false" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
           <folding />
         </state>
       </provider>
@@ -1038,33 +830,319 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/serialization/UserDeserializer.java">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="80" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/ignite/ignite-kafka/2.6.0/ignite-kafka-2.6.0-sources.jar!/org/apache/ignite/stream/kafka/KafkaStreamer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-347">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#6616#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ignite-kafka-streamer-betting-demo/src/main/java/StartIgniteBetDataStreamer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="35" lean-forward="false" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ignite-kafka-streamer-betting-demo/src/main/java/ignite/BetMultipleTupleExtractor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-157">
+          <caret line="26" column="44" lean-forward="false" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ignite-kafka-streamer-betting-demo/src/main/java/ignite/BetDataIgniteStreamer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="55">
+          <caret line="41" column="11" lean-forward="false" selection-start-line="41" selection-start-column="11" selection-end-line="41" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#2321#2322#0" expanded="false" />
+            <element signature="e#2358#2359#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-clients/2.0.0/kafka-clients-2.0.0.jar!/org/apache/kafka/clients/consumer/KafkaConsumer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="351" column="55" lean-forward="false" selection-start-line="351" selection-start-column="55" selection-end-line="351" selection-end-column="55" />
+          <folding>
+            <marker date="1536361108982" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1536361108982" expanded="false" signature="157:2949" ph="..." />
+            <marker date="1536361108982" expanded="false" signature="4198:4209" ph=" { " />
+            <marker date="1536361108982" expanded="false" signature="4268:4274" ph=" }" />
+            <marker date="1536361108982" expanded="true" signature="4398:4560" ph="{...}" />
+            <marker date="1536361108982" expanded="true" signature="4610:4695" ph="{...}" />
+            <marker date="1536361108982" expanded="true" signature="4813:4978" ph="{...}" />
+            <marker date="1536361108982" expanded="true" signature="5097:11445" ph="{...}" />
+            <marker date="1536361108982" expanded="true" signature="11884:12719" ph="{...}" />
+            <marker date="1536361108982" expanded="true" signature="12765:13024" ph="{...}" />
+            <marker date="1536361108982" expanded="true" signature="13064:13317" ph="{...}" />
+            <marker date="1536361108982" expanded="true" signature="13408:14557" ph="{...}" />
+            <marker date="1536361108982" expanded="true" signature="14612:14700" ph="{...}" />
+            <marker date="1536361108982" expanded="true" signature="14781:15453" ph="{...}" />
+            <marker date="1536361108982" expanded="false" signature="15497:15508" ph=" { " />
+            <marker date="1536361108982" expanded="false" signature="15578:15584" ph=" }" />
+            <marker date="1536361108982" expanded="true" signature="15616:15978" ph="{...}" />
+            <marker date="1536361108982" expanded="true" signature="16042:17460" ph="{...}" />
+            <marker date="1536361108982" expanded="true" signature="17466:17484" ph="/**...*/" />
+            <marker date="1536361108982" expanded="true" signature="17552:17563" ph=" { " />
+            <marker date="1536361108982" expanded="true" signature="17596:17602" ph=" }" />
+            <marker date="1536361108982" expanded="true" signature="17659:17670" ph=" { " />
+            <marker date="1536361108982" expanded="true" signature="17713:17719" ph=" }" />
+            <marker date="1536361108982" expanded="true" signature="17810:20202" ph="{...}" />
+            <marker date="1536361108982" expanded="true" signature="20265:20485" ph="{...}" />
+            <marker date="1536361108982" expanded="true" signature="20578:21371" ph="{...}" />
+            <marker date="1536361108982" expanded="true" signature="21160:21235" ph="{...}" />
+            <marker date="1536361108982" expanded="true" signature="21449:21510" ph="{...}" />
+            <marker date="1536361108982" expanded="false" signature="21540:21551" ph=" { " />
+            <marker date="1536361108982" expanded="false" signature="21618:21624" ph=" }" />
+            <marker date="1536361108982" expanded="true" signature="21671:22067" ph="{...}" />
+            <marker date="1536361108982" expanded="true" signature="22144:22236" ph="{...}" />
+            <marker date="1536361108982" expanded="true" signature="22331:22705" ph="{...}" />
+            <marker date="1536361108982" expanded="false" signature="22736:22747" ph=" { " />
+            <marker date="1536361108982" expanded="false" signature="22792:22798" ph=" }" />
+            <marker date="1536361108982" expanded="true" signature="22859:23051" ph="{...}" />
+            <marker date="1536361108982" expanded="true" signature="23160:23422" ph="{...}" />
+            <marker date="1536361108982" expanded="true" signature="23484:23921" ph="{...}" />
+            <marker date="1536361108982" expanded="true" signature="23994:24776" ph="{...}" />
+            <marker date="1536361108982" expanded="true" signature="24843:25617" ph="{...}" />
+            <marker date="1536361108982" expanded="true" signature="25670:25769" ph="{...}" />
+            <marker date="1536361108982" expanded="true" signature="25840:27077" ph="{...}" />
+            <marker date="1536361108982" expanded="true" signature="27144:27244" ph="{...}" />
+            <marker date="1536361108982" expanded="true" signature="27329:27947" ph="{...}" />
+            <marker date="1536361108982" expanded="false" signature="28003:28014" ph=" { " />
+            <marker date="1536361108982" expanded="false" signature="28073:28079" ph=" }" />
+            <marker date="1536361108982" expanded="true" signature="28140:28240" ph="{...}" />
+            <marker date="1536361108982" expanded="true" signature="28319:28975" ph="{...}" />
+            <marker date="1536361108982" expanded="true" signature="29034:29124" ph="{...}" />
+            <marker date="1536361108982" expanded="true" signature="29199:29429" ph="{...}" />
+            <marker date="1536361108982" expanded="true" signature="29492:29902" ph="{...}" />
+            <marker date="1536361108982" expanded="true" signature="29966:30378" ph="{...}" />
+            <marker date="1536361108982" expanded="true" signature="30420:30664" ph="{...}" />
+            <marker date="1536361108982" expanded="true" signature="30779:30894" ph="{...}" />
+            <marker date="1536361108982" expanded="true" signature="31027:31713" ph="{...}" />
+            <marker date="1536361108982" expanded="true" signature="31808:31916" ph="{...}" />
+            <marker date="1536361108982" expanded="true" signature="32029:32268" ph="{...}" />
+            <marker date="1536361108982" expanded="true" signature="32357:32450" ph="{...}" />
+            <marker date="1536361108982" expanded="true" signature="32557:32790" ph="{...}" />
+            <marker date="1536361108982" expanded="false" signature="32815:32826" ph=" { " />
+            <marker date="1536361108982" expanded="false" signature="32864:32870" ph=" }" />
+            <marker date="1536361108982" expanded="true" signature="32876:32894" ph="/**...*/" />
+            <marker date="1536361108982" expanded="false" signature="32965:32976" ph=" { " />
+            <marker date="1536361108982" expanded="false" signature="33034:33040" ph=" }" />
+            <marker date="1536361108982" expanded="true" signature="33082:33509" ph="{...}" />
+            <marker date="1536361108982" expanded="false" signature="33535:33546" ph=" { " />
+            <marker date="1536361108982" expanded="false" signature="33567:33573" ph=" }" />
+            <marker date="1536361108982" expanded="true" signature="33738:34254" ph="{...}" />
+            <marker date="1536361108982" expanded="true" signature="34321:35832" ph="{...}" />
+            <marker date="1536361108982" expanded="true" signature="35891:36347" ph="{...}" />
+            <marker date="1536361108982" expanded="true" signature="36389:36572" ph="{...}" />
+            <marker date="1536361108982" expanded="true" signature="36601:36950" ph="{...}" />
+            <marker date="1536361108982" expanded="true" signature="36979:37090" ph="{...}" />
+            <marker date="1536361108982" expanded="true" signature="37140:37359" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-clients/2.0.0/kafka-clients-2.0.0-sources.jar!/org/apache/kafka/clients/consumer/KafkaConsumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="1153" column="32" lean-forward="false" selection-start-line="1153" selection-start-column="32" selection-end-line="1153" selection-end-column="32" />
+          <folding>
+            <element signature="e#66747#66748#0" expanded="false" />
+            <element signature="e#66790#66791#0" expanded="false" />
+            <element signature="e#69448#69449#0" expanded="false" />
+            <element signature="e#69501#69502#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/src.zip!/java/time/Duration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="510" column="12" lean-forward="false" selection-start-line="510" selection-start-column="12" selection-end-line="510" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/producer/BetDataStreamGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/StartBetDataStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/StartIgniteServerNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/streaming/UserStakeAggregator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/Market.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="48" column="20" lean-forward="false" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/ignite/ignite-core/2.6.0/ignite-core-2.6.0-sources.jar!/org/apache/ignite/configuration/CacheConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="1860" column="32" lean-forward="true" selection-start-line="1860" selection-start-column="32" selection-end-line="1860" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/Bet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <element signature="e#591#592#0" expanded="true" />
+            <element signature="e#616#617#0" expanded="true" />
+            <element signature="e#652#653#0" expanded="true" />
+            <element signature="e#680#681#0" expanded="true" />
+            <element signature="e#726#727#0" expanded="true" />
+            <element signature="e#756#757#0" expanded="true" />
+            <element signature="e#814#815#0" expanded="true" />
+            <element signature="e#852#853#0" expanded="true" />
+            <element signature="e#884#885#0" expanded="true" />
+            <element signature="e#912#913#0" expanded="true" />
+            <element signature="e#954#955#0" expanded="true" />
+            <element signature="e#988#989#0" expanded="true" />
+            <element signature="e#1018#1019#0" expanded="true" />
+            <element signature="e#1047#1048#0" expanded="true" />
+            <element signature="e#1088#1089#0" expanded="true" />
+            <element signature="e#1124#1125#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/utils/IgniteConfigHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="71" column="103" lean-forward="false" selection-start-line="71" selection-start-column="103" selection-end-line="71" selection-end-column="103" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/utils/DataGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="31" column="39" lean-forward="false" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/load/KafkaInitialDataLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="23" column="38" lean-forward="false" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/LoadInitialData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="13" column="39" lean-forward="false" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="57" column="18" lean-forward="false" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="18" />
+          <folding>
+            <element signature="e#1063#1064#0" expanded="true" />
+            <element signature="e#1103#1104#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/load/IgniteInitialDataLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="42" column="45" lean-forward="false" selection-start-line="42" selection-start-column="45" selection-end-line="42" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/StartIgniteConsumers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/streaming/ignite/BetDataIgniteStreamer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/consumer/IgniteBetConsumer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-336">
-          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        <state relative-caret-position="225">
+          <caret line="67" column="30" lean-forward="true" selection-start-line="67" selection-start-column="30" selection-end-line="67" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#3006#3007#0" expanded="true" />
+            <element signature="e#3037#3038#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/streaming/BetMultipleTupleExtractor.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/query/QueryIgnite.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="28" column="19" lean-forward="false" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="34">
+          <caret line="2" column="26" lean-forward="true" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1144,7 +1222,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Maven: com.101tec:zkclient:0.8</last-edited>
+          <last-edited>Maven: com.101tec:zkclient:0.10</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

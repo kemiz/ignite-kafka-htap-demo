@@ -10,9 +10,13 @@ public class User {
     @QuerySqlField
     private String name;
 
+    @QuerySqlField
+    private double stake;
+
     public User(int id, String name) {
         this.id = id;
         this.name = name;
+        this.stake = 0.0;
     }
 
     public int getId() {
@@ -31,13 +35,26 @@ public class User {
         this.name = name;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "id:" + id +
-                ", name:'" + name + '\'' +
-                '}';
+    public double getStake() {
+        return stake;
     }
 
+    public void setStake(double stake) {
+        this.stake = stake;
+    }
 
+    @Override
+    public String toString() {
+        return "{ " +
+                "\"user\":{" +
+                "\"id\": " + id  +
+                ", \"name\":" + "\"" +name + "\"" +
+                ", \"stake\": " + stake +
+                "}" +
+                "}";
+    }
+
+    public void incrementTotalStake(double stakeToAdd) {
+        this.stake += stakeToAdd;
+    }
 }

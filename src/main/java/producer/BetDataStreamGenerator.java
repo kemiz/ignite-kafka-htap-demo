@@ -1,4 +1,4 @@
-package streaming.kafka;
+package producer;
 
 import dao.MarketDao;
 import dao.UserDao;

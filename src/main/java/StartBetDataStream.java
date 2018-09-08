@@ -1,7 +1,6 @@
-import streaming.kafka.BetDataStreamGenerator;
+import producer.BetDataStreamGenerator;
 
 import java.net.UnknownHostException;
-
 
 /**
  * Starts generating a stream of bet data that is published to a kafka topic.
