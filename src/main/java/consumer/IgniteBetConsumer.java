@@ -1,5 +1,7 @@
 package consumer;
 
+import dao.BetDao;
+import dao.UserDao;
 import model.Bet;
 import model.User;
 import org.apache.ignite.Ignite;
@@ -18,20 +20,25 @@ import java.net.UnknownHostException;
 import java.util.Arrays;
 import java.util.Properties;
 
+/**
+ * Simple hipster consumer that starts a transaction in ignite to commit the
+ * incoming bet and increment the total user stake.
+ * This is a cross cache/ partition transaction.
+ */
 public class IgniteBetConsumer {
 
     private final IgniteTransactions transactions;
-    private final IgniteCache<Integer, User> userCache;
+    private final UserDao userDao;
+    private final BetDao betDao;
     private boolean on = false;
     private KafkaConsumer<String, Bet> consumer;
-    private IgniteCache<String, Bet> betCache;
 
     public IgniteBetConsumer() throws UnknownHostException {
 
         IgniteConfiguration cfg = IgniteConfigHelper.getIgniteClientConfig();
         Ignite ignite = Ignition.start(cfg);
-        betCache = ignite.cache(IgniteConfigHelper.BET_CACHE);
-        userCache = ignite.cache(IgniteConfigHelper.USER_CACHE);
+        betDao = new BetDao(ignite);
+        userDao = new UserDao(ignite);
         transactions = ignite.transactions();
 
         Properties config = new Properties();
@@ -58,14 +65,18 @@ public class IgniteBetConsumer {
             ConsumerRecords<String, Bet> records = consumer.poll(100);
             for (ConsumerRecord<String, Bet> record : records) {
                 System.out.printf("offset = %d, key = %s, value = %s%n", record.offset(), record.key(), record.value());
+                // Start an ignite transaction to update the bet cache
+                // and increment the total stake to date of the user
                 try (Transaction tx = transactions.txStart()) {
-                    betCache.put(record.key(), record.value());
-                    User user = userCache.get(record.value().getUserId());
-                    user.incrementTotalStake(record.value().getStake());
-                    userCache.put(user.getId(), user);
+                    Bet bet = record.value();
+                    // add the new bet to the bet cache
+                    betDao.addBet(bet);
+                    User user = userDao.getUserById(bet.getUserId());
+                    user.incrementTotalStake(bet.getStake());
+                    // increment the total stake of the user
+                    userDao.addUser(user);
                     tx.commit();
                 }
-                System.out.println(userCache.get(record.value().getUserId()));
             }
         }
     }
