@@ -77,12 +77,12 @@ public class BetDataStreamGenerator {
         ArrayList<Integer> marketSelections = new ArrayList<Integer>();
         // Generate some random market selections for the best slip
         for (int i = 0; i <= number_of_lines; i++){
-            Market currentSelection = marketDao.getMarketById(random.nextInt(5));
+            Market currentSelection = marketDao.getMarketById(random.nextInt(marketDao.getMarketCount()));
             // Add the selection to the bet slip
             if (!marketSelectionExists(currentSelection, marketSelections)) marketSelections.add(currentSelection.getId());
         }
         // Create the bet, add the selections and set a random stake
-        User user = userDao.getUserById(random.nextInt(5));
+        User user = userDao.getUserById(random.nextInt(userDao.getUserCount()));
         Bet bet = new Bet(
                 UUID.randomUUID().toString(),
                 random.nextInt(20) + 1,
