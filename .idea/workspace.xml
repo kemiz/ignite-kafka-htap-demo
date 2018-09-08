@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="807432e2-5f6c-416c-9ca3-9e8349e00882" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/dao/BetDao.java" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/online-betting-example.iml" afterPath="$PROJECT_DIR$/online-betting-example.iml" />
       <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/consumer/IgniteBetConsumer.java" afterPath="$PROJECT_DIR$/src/main/java/consumer/IgniteBetConsumer.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/MarketDao.java" afterPath="$PROJECT_DIR$/src/main/java/dao/MarketDao.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/producer/BetDataStreamGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/producer/BetDataStreamGenerator.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/query/QueryIgnite.java" afterPath="$PROJECT_DIR$/src/main/java/query/QueryIgnite.java" />
     </list>
@@ -26,9 +23,21 @@
       <file leaf-file-name="BetDataStreamGenerator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/producer/BetDataStreamGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="84" column="56" lean-forward="false" selection-start-line="84" selection-start-column="56" selection-end-line="84" selection-end-column="56" />
+            <state relative-caret-position="99">
+              <caret line="79" column="101" lean-forward="true" selection-start-line="79" selection-start-column="101" selection-end-line="79" selection-end-column="101" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MarketDao.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dao/MarketDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="24" column="33" lean-forward="false" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
+              <folding>
+                <element signature="e#626#627#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -89,7 +98,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BetDao.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BetDao.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/dao/BetDao.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
@@ -117,16 +126,6 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="344">
-              <caret line="73" column="0" lean-forward="false" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -171,7 +170,6 @@
         <option value="$PROJECT_DIR$/src/main/java/streaming/MarketOddsStreamer.java" />
         <option value="$PROJECT_DIR$/src/main/java/serialization/UserSerializer.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/UserDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/MarketDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/load/IgniteInitialDataLoader.java" />
         <option value="$PROJECT_DIR$/src/main/java/LoadInitialData.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/UserTotalStake.java" />
@@ -199,9 +197,10 @@
         <option value="$PROJECT_DIR$/src/main/java/model/User.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/query/QueryIgnite.java" />
-        <option value="$PROJECT_DIR$/src/main/java/producer/BetDataStreamGenerator.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/BetDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/consumer/IgniteBetConsumer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/producer/BetDataStreamGenerator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/MarketDao.java" />
       </list>
     </option>
   </component>
@@ -677,17 +676,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/MarketDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="21" column="51" lean-forward="false" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
-          <folding>
-            <element signature="e#485#486#0" expanded="false" />
-            <element signature="e#545#546#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/ignite/ignite-core/2.6.0/ignite-core-2.6.0-sources.jar!/org/apache/ignite/stream/StreamMultipleTupleExtractor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -1127,14 +1115,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/producer/BetDataStreamGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="84" column="56" lean-forward="false" selection-start-line="84" selection-start-column="56" selection-end-line="84" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/StartIgniteConsumers.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1194,6 +1174,24 @@
         <state relative-caret-position="102">
           <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/producer/BetDataStreamGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="79" column="101" lean-forward="true" selection-start-line="79" selection-start-column="101" selection-end-line="79" selection-end-column="101" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/MarketDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="24" column="33" lean-forward="false" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
+          <folding>
+            <element signature="e#626#627#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -21,4 +21,8 @@ public class MarketDao {
     public void addMarket(Market market) {
         this.marketCache.put(market.getId(), market);
     }
+
+    public int getMarketCount() {
+        return this.marketCache.size();
+    }
 }
