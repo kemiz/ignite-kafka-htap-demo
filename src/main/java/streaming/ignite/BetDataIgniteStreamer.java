@@ -1,4 +1,4 @@
-package streaming;
+package streaming.ignite;
 
 import model.Bet;
 import kafka.consumer.ConsumerConfig;
@@ -6,6 +6,7 @@ import org.apache.ignite.Ignite;
 import org.apache.ignite.IgniteDataStreamer;
 import org.apache.ignite.Ignition;
 import org.apache.ignite.stream.kafka.KafkaStreamer;
+import streaming.BetMultipleTupleExtractor;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;

@@ -1,7 +1,7 @@
 package streaming;
 
-import model.Bet;
 import kafka.message.MessageAndMetadata;
+import model.Bet;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.ignite.stream.StreamMultipleTupleExtractor;

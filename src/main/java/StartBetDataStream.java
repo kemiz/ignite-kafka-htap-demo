@@ -1,4 +1,4 @@
-import streaming.BetDataStreamGenerator;
+import streaming.kafka.BetDataStreamGenerator;
 
 import java.net.UnknownHostException;
 

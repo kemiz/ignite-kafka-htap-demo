@@ -1,4 +1,4 @@
-import streaming.BetDataIgniteStreamer;
+import streaming.ignite.BetDataIgniteStreamer;
 
 import java.net.UnknownHostException;
 

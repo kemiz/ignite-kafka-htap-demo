@@ -1,7 +1,6 @@
 package serialization;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import model.Bet;
 import model.User;
 import org.apache.kafka.common.serialization.Deserializer;
 
