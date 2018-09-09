@@ -1,5 +1,6 @@
 package producer;
 
+import com.google.gson.Gson;
 import dao.MarketDao;
 import dao.UserDao;
 import model.Bet;
@@ -8,6 +9,7 @@ import model.User;
 import org.apache.ignite.Ignite;
 import org.apache.ignite.Ignition;
 import org.apache.kafka.clients.producer.KafkaProducer;
+import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.clients.producer.ProducerRecord;
 
 import java.net.InetAddress;
@@ -22,7 +24,7 @@ import static utils.IgniteConfigHelper.getIgniteClientConfig;
 public class BetDataStreamGenerator {
 
     private static final String TOPIC = "BetTopic";
-    private KafkaProducer<String, Bet> betProducer;
+    private KafkaProducer<Long, String> betProducer;
     private boolean done = false;
     private long intervalBetweenBetPlacements = 1000;
     private Random random = new Random(12345);
@@ -45,10 +47,12 @@ public class BetDataStreamGenerator {
         config.put("group.id", "demo-group");
         config.put("zookeeper.connect", "127.0.0.1");
         config.put("acks", "all");
-        config.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
-        config.put("value.serializer", "serialization.BetSerializer");
-        config.put("key.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
-        config.put("value.deserializer", "serialization.BetDeserializer");
+        config.put("key.serializer", "org.apache.kafka.common.serialization.LongSerializer");
+        config.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer");
+        config.put("key.deserializer", "org.apache.kafka.common.serialization.LongDeserializer");
+        config.put("value.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
+        config.put(ProducerConfig.INTERCEPTOR_CLASSES_CONFIG,
+                "io.confluent.monitoring.clients.interceptor.MonitoringProducerInterceptor");
         this.betProducer = new KafkaProducer<>(config);
     }
 
@@ -56,10 +60,14 @@ public class BetDataStreamGenerator {
      * Start generating random bets and publish them to kafka topic
      */
     public void start(){
+        Gson g = new Gson();
+        long id = 0l;
         while (!done) {
             // Generate a random bet and publish it the kafka topic
             Bet bet = generateRandomBet();
-            betProducer.send(new ProducerRecord<>(TOPIC, bet.getId(), bet));
+            // convert to json string before sending
+            betProducer.send(new ProducerRecord<>(TOPIC, id, g.toJson(bet).toString()));
+            id++;
             try {
                 Thread.sleep(intervalBetweenBetPlacements);
             } catch (InterruptedException e) {

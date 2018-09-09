@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="807432e2-5f6c-416c-9ca3-9e8349e00882" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/streaming/MarketsSummary.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/online-betting-example.iml" afterPath="$PROJECT_DIR$/online-betting-example.iml" />
       <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Bet.java" afterPath="$PROJECT_DIR$/src/main/java/model/Bet.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/streaming/MarketOddsStreamer.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/streaming/UserStakeAggregator.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/consumer/IgniteBetConsumer.java" afterPath="$PROJECT_DIR$/src/main/java/consumer/IgniteBetConsumer.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/producer/BetDataStreamGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/producer/BetDataStreamGenerator.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/streaming/MarketsSummary.java" afterPath="$PROJECT_DIR$/src/main/java/streaming/MarketsSummary.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -23,43 +22,66 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BetDataStreamGenerator.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BetDataStreamGenerator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/producer/BetDataStreamGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="24" column="37" lean-forward="false" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="37" />
+            <state relative-caret-position="318">
+              <caret line="54" column="16" lean-forward="false" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MarketDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dao/MarketDao.java">
+      <file leaf-file-name="IgniteBetConsumer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/consumer/IgniteBetConsumer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="24" column="33" lean-forward="false" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
+            <state relative-caret-position="-28">
+              <caret line="53" column="82" lean-forward="false" selection-start-line="53" selection-start-column="82" selection-end-line="53" selection-end-column="82" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MarketsSummary.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/streaming/MarketsSummary.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="32" column="42" lean-forward="false" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="42" />
               <folding>
-                <element signature="e#626#627#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BetSerializer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/serialization/BetSerializer.java">
+      <file leaf-file-name="Serdes.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-clients/2.0.0/kafka-clients-2.0.0-sources.jar!/org/apache/kafka/common/serialization/Serdes.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            <state relative-caret-position="0">
+              <caret line="167" column="33" lean-forward="false" selection-start-line="167" selection-start-column="33" selection-end-line="167" selection-end-column="33" />
+              <folding>
+                <element signature="e#5683#5684#0" expanded="true" />
+                <element signature="e#5721#5722#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KStream.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-streams/2.0.0/kafka-streams-2.0.0-sources.jar!/org/apache/kafka/streams/kstream/KStream.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="163">
+              <caret line="269" column="27" lean-forward="false" selection-start-line="269" selection-start-column="25" selection-end-line="269" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BetDeserializer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/serialization/BetDeserializer.java">
+      <file leaf-file-name="Produced.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-streams/2.0.0/kafka-streams-2.0.0-sources.jar!/org/apache/kafka/streams/kstream/Produced.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="16" column="38" lean-forward="false" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="38" />
+            <state relative-caret-position="456">
+              <caret line="62" column="40" lean-forward="false" selection-start-line="62" selection-start-column="40" selection-end-line="62" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -68,28 +90,28 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="68" column="20" lean-forward="false" selection-start-line="68" selection-start-column="20" selection-end-line="68" selection-end-column="20" />
+            <state relative-caret-position="155">
+              <caret line="31" column="21" lean-forward="false" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BetDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dao/BetDao.java">
+      <file leaf-file-name="StartIgniteConsumers.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/StartIgniteConsumers.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state relative-caret-position="34">
+              <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MarketsSummary.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/streaming/MarketsSummary.java">
+      <file leaf-file-name="DefaultStreamPartitioner.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-streams/2.0.0/kafka-streams-2.0.0-sources.jar!/org/apache/kafka/streams/processor/internals/DefaultStreamPartitioner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="38" column="46" lean-forward="false" selection-start-line="38" selection-start-column="46" selection-end-line="38" selection-end-column="46" />
+            <state relative-caret-position="136">
+              <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -97,31 +119,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Bet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/model/Bet.java">
+      <file leaf-file-name="KTable.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-streams/2.0.0/kafka-streams-2.0.0-sources.jar!/org/apache/kafka/streams/kstream/KTable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="66" column="17" lean-forward="true" selection-start-line="66" selection-start-column="17" selection-end-line="66" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TimeWindowedKStream.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-streams/2.0.0/kafka-streams-2.0.0-sources.jar!/org/apache/kafka/streams/kstream/TimeWindowedKStream.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3982">
-              <caret line="60" column="36" lean-forward="false" selection-start-line="60" selection-start-column="36" selection-end-line="60" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="KStream.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-streams/2.0.0/kafka-streams-2.0.0-sources.jar!/org/apache/kafka/streams/kstream/KStream.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-6091">
-              <caret line="337" column="45" lean-forward="false" selection-start-line="337" selection-start-column="27" selection-end-line="337" selection-end-column="45" />
+            <state relative-caret-position="-4707">
+              <caret line="361" column="7" lean-forward="false" selection-start-line="361" selection-start-column="7" selection-end-line="361" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -191,13 +193,13 @@
         <option value="$PROJECT_DIR$/src/main/java/model/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/query/QueryIgnite.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/BetDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/consumer/IgniteBetConsumer.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/MarketDao.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/streaming/UserStakeAggregator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/streaming/MarketsSummary.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/Bet.java" />
         <option value="$PROJECT_DIR$/src/main/java/producer/BetDataStreamGenerator.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/streaming/MarketsSummary.java" />
+        <option value="$PROJECT_DIR$/src/main/java/consumer/IgniteBetConsumer.java" />
       </list>
     </option>
   </component>
@@ -391,7 +393,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.StartIgniteConsumers">
+  <component name="RunManager" selected="Application.StartIgniteServerNode">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -413,14 +415,14 @@
       <module name="online-betting-example" />
       <envs />
     </configuration>
-    <configuration name="QueryIgnite" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="MarketsSummary" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="query.*" />
+          <option name="PATTERN" value="streaming.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="query.QueryIgnite" />
+      <option name="MAIN_CLASS_NAME" value="streaming.MarketsSummary" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -553,15 +555,15 @@
       <item index="1" class="java.lang.String" itemvalue="Application.StartIgniteServerNode" />
       <item index="2" class="java.lang.String" itemvalue="Application.StartIgniteConsumers" />
       <item index="3" class="java.lang.String" itemvalue="Application.StartBetDataStream" />
-      <item index="4" class="java.lang.String" itemvalue="Application.QueryIgnite" />
+      <item index="4" class="java.lang.String" itemvalue="Application.MarketsSummary" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.StartIgniteConsumers" />
+        <item index="0" class="java.lang.String" itemvalue="Application.StartIgniteServerNode" />
         <item index="1" class="java.lang.String" itemvalue="Application.StartBetDataStream" />
-        <item index="2" class="java.lang.String" itemvalue="Application.QueryIgnite" />
-        <item index="3" class="java.lang.String" itemvalue="Application.LoadInitialData" />
-        <item index="4" class="java.lang.String" itemvalue="Application.StartIgniteServerNode" />
+        <item index="2" class="java.lang.String" itemvalue="Application.StartIgniteConsumers" />
+        <item index="3" class="java.lang.String" itemvalue="Application.MarketsSummary" />
+        <item index="4" class="java.lang.String" itemvalue="Application.LoadInitialData" />
       </list>
     </recent_temporary>
   </component>
@@ -586,7 +588,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="45" y="22" width="1396" height="878" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -601,7 +602,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23633678" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23633678" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24963072" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -632,108 +633,11 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="26" />
+      <option name="time" value="28" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-streams/0.11.0.3/kafka-streams-0.11.0.3.jar!/org/apache/kafka/streams/processor/ProcessorContext.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/processor/UserTotalStakeAccumulator.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/UserTotalStake.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/BetTransactionSummary.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-clients/0.11.0.3/kafka-clients-0.11.0.3.jar!/org/apache/kafka/clients/producer/ProducerConfig.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="31" column="365" lean-forward="false" selection-start-line="31" selection-start-column="365" selection-end-line="31" selection-end-column="365" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-streams/0.11.0.3/kafka-streams-0.11.0.3.jar!/org/apache/kafka/streams/StreamsConfig.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="47" column="36" lean-forward="false" selection-start-line="47" selection-start-column="36" selection-end-line="47" selection-end-column="36" />
-          <folding>
-            <marker date="1536344339081" expanded="false" signature="0:104" ph="/.../" />
-            <marker date="1536344339081" expanded="false" signature="148:1537" ph="..." />
-            <marker date="1536344339081" expanded="true" signature="4735:4753" ph="/**...*/" />
-            <marker date="1536344339081" expanded="true" signature="8405:8423" ph="/**...*/" />
-            <marker date="1536344339081" expanded="true" signature="9066:9084" ph="/**...*/" />
-            <marker date="1536344339081" expanded="true" signature="9754:9772" ph="/**...*/" />
-            <marker date="1536344339081" expanded="false" signature="10419:10430" ph=" { " />
-            <marker date="1536344339081" expanded="false" signature="10464:10470" ph=" }" />
-            <marker date="1536344339081" expanded="false" signature="10532:10543" ph=" { " />
-            <marker date="1536344339081" expanded="false" signature="10577:10583" ph=" }" />
-            <marker date="1536344339081" expanded="false" signature="10624:10635" ph=" { " />
-            <marker date="1536344339081" expanded="false" signature="10664:10670" ph=" }" />
-            <marker date="1536344339081" expanded="false" signature="10713:10724" ph=" { " />
-            <marker date="1536344339081" expanded="false" signature="10745:10751" ph=" }" />
-            <marker date="1536344339081" expanded="true" signature="10845:11347" ph="{...}" />
-            <marker date="1536344339081" expanded="true" signature="11431:12488" ph="{...}" />
-            <marker date="1536344339081" expanded="true" signature="12623:13494" ph="{...}" />
-            <marker date="1536344339081" expanded="true" signature="13593:13821" ph="{...}" />
-            <marker date="1536344339081" expanded="true" signature="13890:15040" ph="{...}" />
-            <marker date="1536344339081" expanded="true" signature="15139:15309" ph="{...}" />
-            <marker date="1536344339081" expanded="true" signature="15315:15333" ph="/**...*/" />
-            <marker date="1536344339081" expanded="false" signature="15377:15388" ph=" { " />
-            <marker date="1536344339081" expanded="false" signature="15418:15424" ph=" }" />
-            <marker date="1536344339081" expanded="true" signature="15461:16091" ph="{...}" />
-            <marker date="1536344339081" expanded="true" signature="16097:16115" ph="/**...*/" />
-            <marker date="1536344339081" expanded="false" signature="16161:16172" ph=" { " />
-            <marker date="1536344339081" expanded="false" signature="16204:16210" ph=" }" />
-            <marker date="1536344339081" expanded="true" signature="16249:16896" ph="{...}" />
-            <marker date="1536344339081" expanded="true" signature="16956:17278" ph="{...}" />
-            <marker date="1536344339081" expanded="true" signature="17380:17735" ph="{...}" />
-            <marker date="1536344339081" expanded="false" signature="17779:17790" ph=" { " />
-            <marker date="1536344339081" expanded="false" signature="17831:17837" ph=" }" />
-            <marker date="1536344339081" expanded="true" signature="17850:28359" ph="{...}" />
-            <marker date="1536344339081" expanded="true" signature="28400:28542" ph="{...}" />
-            <marker date="1536344339081" expanded="true" signature="28525:28536" ph="{}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka_2.11/0.11.0.3/kafka_2.11-0.11.0.3.jar!/kafka/message/MessageAndMetadata.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="22" column="26" lean-forward="false" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka_2.11/0.11.0.3/kafka_2.11-0.11.0.3.jar!/kafka/consumer/ConsumerConfig.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="564" column="33" lean-forward="true" selection-start-line="564" selection-start-column="33" selection-end-line="564" selection-end-column="33" />
-          <folding>
-            <element signature="e#20771#20772#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/serialization/UserDeserializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/ignite/ignite-kafka/2.6.0/ignite-kafka-2.6.0.jar!/org/apache/ignite/stream/kafka/KafkaStreamer.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="151">
@@ -1028,40 +932,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/StartIgniteConsumers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/consumer/IgniteBetConsumer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="70" column="20" lean-forward="false" selection-start-line="70" selection-start-column="20" selection-end-line="70" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#3316#3317#0" expanded="false" />
-            <element signature="e#3347#3348#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/serialization/BetSerializer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/serialization/BetDeserializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="16" column="38" lean-forward="false" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="38" />
           <folding />
         </state>
       </provider>
@@ -1079,16 +953,8 @@
         <state relative-caret-position="238">
           <caret line="24" column="33" lean-forward="false" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
           <folding>
-            <element signature="e#626#627#0" expanded="true" />
+            <element signature="e#626#627#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="68" column="20" lean-forward="false" selection-start-line="68" selection-start-column="20" selection-end-line="68" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1114,16 +980,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#30645#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-streams/2.0.0/kafka-streams-2.0.0-sources.jar!/org/apache/kafka/streams/kstream/KeyValueMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-10">
-          <caret line="32" column="23" lean-forward="false" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="23" />
           <folding />
         </state>
       </provider>
@@ -1144,14 +1000,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-streams/2.0.0/kafka-streams-2.0.0-sources.jar!/org/apache/kafka/streams/kstream/KStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6091">
-          <caret line="337" column="45" lean-forward="false" selection-start-line="337" selection-start-column="27" selection-end-line="337" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/streaming/MarketOddsStreamer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-174">
@@ -1160,29 +1008,162 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/streaming/MarketsSummary.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/serialization/BetDeserializer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="38" column="46" lean-forward="false" selection-start-line="38" selection-start-column="46" selection-end-line="38" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="204">
+          <caret line="16" column="38" lean-forward="false" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-streams/2.0.0/kafka-streams-2.0.0-sources.jar!/org/apache/kafka/streams/kstream/internals/KStreamFlatMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-streams/2.0.0/kafka-streams-2.0.0-sources.jar!/org/apache/kafka/streams/processor/internals/RecordDeserializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="935">
+          <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/Bet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
-          <caret line="66" column="17" lean-forward="true" selection-start-line="66" selection-start-column="17" selection-end-line="66" selection-end-column="17" />
+          <caret line="66" column="17" lean-forward="false" selection-start-line="66" selection-start-column="17" selection-end-line="66" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/src.zip!/java/lang/Long.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="53" column="19" lean-forward="false" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-clients/2.0.0/kafka-clients-2.0.0-sources.jar!/org/apache/kafka/common/serialization/Serde.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="28" column="24" lean-forward="false" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-streams/2.0.0/kafka-streams-2.0.0-sources.jar!/org/apache/kafka/streams/processor/StreamPartitioner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="50" column="23" lean-forward="false" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-streams/2.0.0/kafka-streams-2.0.0-sources.jar!/org/apache/kafka/streams/kstream/KTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4707">
+          <caret line="361" column="7" lean-forward="false" selection-start-line="361" selection-start-column="7" selection-end-line="361" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-streams/2.0.0/kafka-streams-2.0.0-sources.jar!/org/apache/kafka/streams/processor/internals/DefaultStreamPartitioner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-streams/2.0.0/kafka-streams-2.0.0-sources.jar!/org/apache/kafka/streams/kstream/Produced.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="62" column="40" lean-forward="false" selection-start-line="62" selection-start-column="40" selection-end-line="62" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-streams/2.0.0/kafka-streams-2.0.0-sources.jar!/org/apache/kafka/streams/kstream/KStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="269" column="27" lean-forward="false" selection-start-line="269" selection-start-column="25" selection-end-line="269" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-streams/2.0.0/kafka-streams-2.0.0-sources.jar!/org/apache/kafka/streams/kstream/KeyValueMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="55" column="7" lean-forward="false" selection-start-line="55" selection-start-column="7" selection-end-line="55" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-clients/2.0.0/kafka-clients-2.0.0-sources.jar!/org/apache/kafka/common/serialization/Serdes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="167" column="33" lean-forward="false" selection-start-line="167" selection-start-column="33" selection-end-line="167" selection-end-column="33" />
+          <folding>
+            <element signature="e#5683#5684#0" expanded="true" />
+            <element signature="e#5721#5722#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-streams/2.0.0/kafka-streams-2.0.0-sources.jar!/org/apache/kafka/streams/KeyValue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="26" column="3" lean-forward="true" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/producer/BetDataStreamGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="24" column="37" lean-forward="false" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="37" />
+        <state relative-caret-position="318">
+          <caret line="54" column="16" lean-forward="false" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="31" column="21" lean-forward="false" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/StartIgniteConsumers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/consumer/IgniteBetConsumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-28">
+          <caret line="53" column="82" lean-forward="false" selection-start-line="53" selection-start-column="82" selection-end-line="53" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/streaming/MarketsSummary.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="32" column="42" lean-forward="false" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
