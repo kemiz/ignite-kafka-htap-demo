@@ -23,8 +23,8 @@ import static utils.IgniteConfigHelper.getIgniteClientConfig;
  */
 public class BetDataStreamGenerator {
 
-    private static final String TOPIC = "BetTopic";
-    private KafkaProducer<Long, String> betProducer;
+    private static final String TOPIC = "Bets";
+    private KafkaProducer<String, String> betProducer;
     private boolean done = false;
     private long intervalBetweenBetPlacements = 1000;
     private Random random = new Random(12345);
@@ -47,12 +47,15 @@ public class BetDataStreamGenerator {
         config.put("group.id", "demo-group");
         config.put("zookeeper.connect", "127.0.0.1");
         config.put("acks", "all");
-        config.put("key.serializer", "org.apache.kafka.common.serialization.LongSerializer");
+        config.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
         config.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer");
-        config.put("key.deserializer", "org.apache.kafka.common.serialization.LongDeserializer");
+        config.put("key.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
         config.put("value.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
+
+        /** enable confluent interceptor monitoring **/
         config.put(ProducerConfig.INTERCEPTOR_CLASSES_CONFIG,
                 "io.confluent.monitoring.clients.interceptor.MonitoringProducerInterceptor");
+
         this.betProducer = new KafkaProducer<>(config);
     }
 
@@ -61,13 +64,12 @@ public class BetDataStreamGenerator {
      */
     public void start(){
         Gson g = new Gson();
-        long id = 0l;
         while (!done) {
             // Generate a random bet and publish it the kafka topic
             Bet bet = generateRandomBet();
             // convert to json string before sending
-            betProducer.send(new ProducerRecord<>(TOPIC, id, g.toJson(bet).toString()));
-            id++;
+            betProducer.send(new ProducerRecord<>(TOPIC, bet.getId(), g.toJson(bet).toString()));
+            System.out.println("New bet event: " + new Gson().toJson(bet));
             try {
                 Thread.sleep(intervalBetweenBetPlacements);
             } catch (InterruptedException e) {
@@ -82,7 +84,7 @@ public class BetDataStreamGenerator {
      */
     private Bet generateRandomBet() {
         int number_of_lines = random.nextInt(5) + 1;
-        ArrayList<Integer> marketSelections = new ArrayList<Integer>();
+        ArrayList<Long> marketSelections = new ArrayList<>();
         // Generate some random market selections for the best slip
         for (int i = 0; i <= number_of_lines; i++){
             Market currentSelection = marketDao.getMarketById(random.nextInt(marketDao.getMarketCount()));
@@ -96,12 +98,11 @@ public class BetDataStreamGenerator {
                 random.nextInt(20) + 1,
                 user.getId(),
                 marketSelections);
-        System.out.println(bet);
         return bet;
     }
 
-    private static boolean marketSelectionExists(Market currentSelection, ArrayList<Integer> marketSelections) {
-        for (Integer marketId : marketSelections) {
+    private static boolean marketSelectionExists(Market currentSelection, ArrayList<Long> marketSelections) {
+        for (Long marketId : marketSelections) {
             if (marketId == currentSelection.getId()) {
                 return true;
             }

@@ -8,13 +8,13 @@ import static utils.IgniteConfigHelper.MARKET_CACHE;
 
 public class MarketDao {
 
-    private final IgniteCache<Integer, Market> marketCache;
+    private final IgniteCache<Long, Market> marketCache;
 
     public MarketDao(Ignite ignite){
         this.marketCache = ignite.cache(MARKET_CACHE);
     }
 
-    public Market getMarketById(int marketId) {
+    public Market getMarketById(long marketId) {
         return marketCache.get(marketId);
     }
 

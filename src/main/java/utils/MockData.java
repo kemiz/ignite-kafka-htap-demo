@@ -6,14 +6,9 @@ import model.User;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class DataGenerator {
+public class MockData {
 
     private static final Random random = new Random();
-
-    public static  Market getRandomMarket() {
-        return getBetMarketData().get(random.nextInt(5));
-    }
-
 
     public static ArrayList<Market> getBetMarketData() {
         ArrayList<Market> marketData = new ArrayList<Market>();

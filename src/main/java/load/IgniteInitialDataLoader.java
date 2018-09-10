@@ -7,10 +7,8 @@ import model.User;
 import org.apache.ignite.Ignite;
 import org.apache.ignite.Ignition;
 import org.apache.ignite.configuration.IgniteConfiguration;
-import utils.DataGenerator;
+import utils.MockData;
 import utils.IgniteConfigHelper;
-
-import java.util.ArrayList;
 
 public class IgniteInitialDataLoader {
 
@@ -33,14 +31,14 @@ public class IgniteInitialDataLoader {
     }
 
     private void loadInitialMarketData(){
-        for (Market market : DataGenerator.getBetMarketData()) {
+        for (Market market : MockData.getBetMarketData()) {
             marketDao.addMarket(market);
             System.out.println(marketDao.getMarketById(market.getId()));
         }
     }
 
     private void loadInitialUserData(){
-        for (User user : DataGenerator.getUserData()) {
+        for (User user : MockData.getUserData()) {
             userDao.addUser(user);
             System.out.println(userDao.getUserById(user.getId()));
         }

@@ -2,24 +2,25 @@ package model;
 
 import org.apache.ignite.cache.query.annotations.QuerySqlField;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 
-public class Bet {
+public class Bet implements Serializable {
 
     @QuerySqlField(index = true)
     private String id;
 
     @QuerySqlField
-    private ArrayList<Integer> markets;
+    private ArrayList<Long> markets;
 
     @QuerySqlField
     private double stake;
 
     @QuerySqlField
-    private int userId;
+    private long userId;
 
-    public Bet(String id, double stake, int userId, ArrayList<Integer> markets) {
+    public Bet(String id, double stake, long userId, ArrayList<Long> markets) {
         this.id = id;
         this.markets = markets;
         this.stake = stake;
@@ -38,11 +39,11 @@ public class Bet {
         this.id = id;
     }
 
-    public ArrayList<Integer> getMarkets() {
+    public ArrayList<Long> getMarkets() {
         return markets;
     }
 
-    public void setMarkets(ArrayList<Integer> markets) {
+    public void setMarkets(ArrayList<Long> markets) {
         this.markets = markets;
     }
 
@@ -54,11 +55,11 @@ public class Bet {
         this.stake = stake;
     }
 
-    public int getUserId() {
+    public long getUserId() {
         return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(long userId) {
         this.userId = userId;
     }
 

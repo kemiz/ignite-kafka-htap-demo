@@ -2,10 +2,12 @@ package model;
 
 import org.apache.ignite.cache.query.annotations.QuerySqlField;
 
-public class Market {
+import java.io.Serializable;
+
+public class Market implements Serializable {
 
     @QuerySqlField
-    private int id;
+    private long id;
 
     @QuerySqlField
     private String market;
@@ -13,17 +15,17 @@ public class Market {
     @QuerySqlField
     private double odds;
 
-    public Market(int id, String market, double odds) {
+    public Market(long id, String market, double odds) {
         this.id = id;
         this.market = market;
         this.odds = odds;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -45,7 +47,7 @@ public class Market {
 
     @Override
     public String toString() {
-        return "Market{" +
+        return "{ market {" +
                 "id:" + id +
                 ", market:'" + market + '\'' +
                 ", odds:" + odds +
