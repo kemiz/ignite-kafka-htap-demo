@@ -7,7 +7,7 @@ import java.io.Serializable;
 public class Market implements Serializable {
 
     @QuerySqlField
-    private long id;
+    private String id;
 
     @QuerySqlField
     private String market;
@@ -15,17 +15,17 @@ public class Market implements Serializable {
     @QuerySqlField
     private double odds;
 
-    public Market(long id, String market, double odds) {
+    public Market(String id, String market, double odds) {
         this.id = id;
         this.market = market;
         this.odds = odds;
     }
 
-    public long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(String id) {
         this.id = id;
     }
 

@@ -11,6 +11,7 @@ import org.apache.ignite.Ignition;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.clients.producer.ProducerRecord;
+import org.apache.kafka.streams.KeyValue;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
@@ -84,15 +85,15 @@ public class BetDataStreamGenerator {
      */
     private Bet generateRandomBet() {
         int number_of_lines = random.nextInt(5) + 1;
-        ArrayList<Long> marketSelections = new ArrayList<>();
+        ArrayList<String> marketSelections = new ArrayList<>();
         // Generate some random market selections for the best slip
         for (int i = 0; i <= number_of_lines; i++){
-            Market currentSelection = marketDao.getMarketById(random.nextInt(marketDao.getMarketCount()));
+            String currentSelection = random.nextInt(marketDao.getMarketCount()) + "";
             // Add the selection to the bet slip
-            if (!marketSelectionExists(currentSelection, marketSelections)) marketSelections.add(currentSelection.getId());
+            if (!marketSelectionExists(currentSelection, marketSelections)) marketSelections.add(currentSelection);
         }
         // Create the bet, add the selections and set a random stake
-        User user = userDao.getUserById(random.nextInt(userDao.getUserCount()));
+        User user = userDao.getUserById(random.nextInt(userDao.getUserCount()) + "");
         Bet bet = new Bet(
                 UUID.randomUUID().toString(),
                 random.nextInt(20) + 1,
@@ -101,9 +102,9 @@ public class BetDataStreamGenerator {
         return bet;
     }
 
-    private static boolean marketSelectionExists(Market currentSelection, ArrayList<Long> marketSelections) {
-        for (Long marketId : marketSelections) {
-            if (marketId == currentSelection.getId()) {
+    private static boolean marketSelectionExists(String currentSelection, ArrayList<String> marketSelections) {
+        for (String marketId : marketSelections) {
+            if (marketId.equals(currentSelection)) {
                 return true;
             }
         }

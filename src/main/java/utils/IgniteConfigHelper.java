@@ -20,6 +20,7 @@ public class IgniteConfigHelper {
     public static final String BET_CACHE = "Bet";
     public static final String MARKET_CACHE = "Market";
     public static final String USER_CACHE = "User";
+    public static final String MARKET_COUNT_CACHE = "MarketCount";
 
     public static IgniteConfiguration getIgniteClientConfig() {
         IgniteConfiguration cfg = new IgniteConfiguration();
@@ -51,17 +52,17 @@ public class IgniteConfigHelper {
         marketCacheCfg.setWriteSynchronizationMode(CacheWriteSynchronizationMode.FULL_SYNC);
         marketCacheCfg.setCacheMode(CacheMode.PARTITIONED);
         marketCacheCfg.setBackups(1);
-        marketCacheCfg.setIndexedTypes(Long.class, Market.class);
+        marketCacheCfg.setIndexedTypes(String.class, Market.class);
         
-        CacheConfiguration<Integer, User> userCacheCfg = new CacheConfiguration<>();
+        CacheConfiguration<String, User> userCacheCfg = new CacheConfiguration<>();
         userCacheCfg.setName(USER_CACHE);
         userCacheCfg.setAtomicityMode(CacheAtomicityMode.TRANSACTIONAL);
         userCacheCfg.setWriteSynchronizationMode(CacheWriteSynchronizationMode.FULL_SYNC);
         userCacheCfg.setCacheMode(CacheMode.PARTITIONED);
         userCacheCfg.setBackups(1);
-        userCacheCfg.setIndexedTypes(Long.class, User.class);
+        userCacheCfg.setIndexedTypes(String.class, User.class);
 
-        CacheConfiguration<Integer, Bet> betCacheCfg = new CacheConfiguration<>();
+        CacheConfiguration<String, Bet> betCacheCfg = new CacheConfiguration<>();
         betCacheCfg.setName(BET_CACHE);
         betCacheCfg.setAtomicityMode(CacheAtomicityMode.TRANSACTIONAL);
         betCacheCfg.setWriteSynchronizationMode(CacheWriteSynchronizationMode.FULL_SYNC);

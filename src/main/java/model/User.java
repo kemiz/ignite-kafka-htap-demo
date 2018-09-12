@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class User implements Serializable {
 
     @QuerySqlField
-    private long id;
+    private String id;
 
     @QuerySqlField
     private String name;
@@ -18,18 +18,18 @@ public class User implements Serializable {
 
     private ArrayList<String> betIds;
 
-    public User(int id, String name) {
+    public User(String id, String name) {
         this.id = id;
         this.name = name;
         this.stake = 0.0;
         this.betIds = new ArrayList<>();
     }
 
-    public long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(String id) {
         this.id = id;
     }
 

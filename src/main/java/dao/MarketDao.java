@@ -5,16 +5,18 @@ import org.apache.ignite.Ignite;
 import org.apache.ignite.IgniteCache;
 
 import static utils.IgniteConfigHelper.MARKET_CACHE;
+import static utils.IgniteConfigHelper.MARKET_COUNT_CACHE;
 
 public class MarketDao {
 
-    private final IgniteCache<Long, Market> marketCache;
+    private final IgniteCache<String, Market> marketCache;
+
 
     public MarketDao(Ignite ignite){
         this.marketCache = ignite.cache(MARKET_CACHE);
     }
 
-    public Market getMarketById(long marketId) {
+    public Market getMarketById(String marketId) {
         return marketCache.get(marketId);
     }
 

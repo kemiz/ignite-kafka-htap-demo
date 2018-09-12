@@ -12,15 +12,15 @@ public class Bet implements Serializable {
     private String id;
 
     @QuerySqlField
-    private ArrayList<Long> markets;
+    private ArrayList<String> markets;
 
     @QuerySqlField
     private double stake;
 
     @QuerySqlField
-    private long userId;
+    private String userId;
 
-    public Bet(String id, double stake, long userId, ArrayList<Long> markets) {
+    public Bet(String id, double stake, String userId, ArrayList<String> markets) {
         this.id = id;
         this.markets = markets;
         this.stake = stake;
@@ -39,11 +39,11 @@ public class Bet implements Serializable {
         this.id = id;
     }
 
-    public ArrayList<Long> getMarkets() {
+    public ArrayList<String> getMarkets() {
         return markets;
     }
 
-    public void setMarkets(ArrayList<Long> markets) {
+    public void setMarkets(ArrayList<String> markets) {
         this.markets = markets;
     }
 
@@ -55,11 +55,11 @@ public class Bet implements Serializable {
         this.stake = stake;
     }
 
-    public long getUserId() {
+    public String getUserId() {
         return userId;
     }
 
-    public void setUserId(long userId) {
+    public void setUserId(String userId) {
         this.userId = userId;
     }
 
