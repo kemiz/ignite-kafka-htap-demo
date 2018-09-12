@@ -13,7 +13,7 @@ import utils.IgniteConfigHelper;
 
 import java.util.List;
 
-public class TotalStakePerUser {
+public class Top3UsersByStake {
     public static void main(String[] args) throws InterruptedException {
         IgniteConfiguration cfg = IgniteConfigHelper.getIgniteClientConfig();
         Ignite ignite = Ignition.start(cfg);
