@@ -59,6 +59,10 @@ public class TotalCountPerMarket {
 
     }
 
+    public static void main(String[] args) {
+        new TotalCountPerMarket().start();
+    }
+
     public Properties getStreamsConfig() {
         Properties props = new Properties();
         props.put(StreamsConfig.APPLICATION_ID_CONFIG, "market-summary");
