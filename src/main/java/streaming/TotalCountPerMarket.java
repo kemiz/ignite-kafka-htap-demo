@@ -19,23 +19,12 @@ import java.util.Properties;
 
 public class TotalCountPerMarket {
 
-    private MarketDao marketDao;
+    final StreamsBuilder builder;
 
     public TotalCountPerMarket(){
 
-//        marketDao = new MarketDao(Ignition.start(IgniteConfigHelper.getIgniteClientConfig()));
 
-        Properties props = new Properties();
-        props.put(StreamsConfig.APPLICATION_ID_CONFIG, "market-summary");
-        props.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, "127.0.0.1:9092");
-        props.put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, Serdes.String().getClass());
-        props.put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, Serdes.String().getClass());
-        props.put(StreamsConfig.PRODUCER_PREFIX + ProducerConfig.INTERCEPTOR_CLASSES_CONFIG,
-                "io.confluent.monitoring.clients.interceptor.MonitoringProducerInterceptor");
-        props.put(StreamsConfig.CONSUMER_PREFIX + ConsumerConfig.INTERCEPTOR_CLASSES_CONFIG,
-                "io.confluent.monitoring.clients.interceptor.MonitoringConsumerInterceptor");
-
-        final StreamsBuilder builder = new StreamsBuilder();
+        builder = new StreamsBuilder();
 
         KStream<String, String> betStream = builder.stream("Bets");
         KTable<String, String> marketTable = builder.table("Markets");
@@ -67,12 +56,25 @@ public class TotalCountPerMarket {
         final Topology topology = builder.build();
         System.out.println(topology.describe());
 
-        // start the stream
-        new KafkaStreams(builder.build(), props).start();
+
     }
 
-    public static void main(String[] args) {
-        TotalCountPerMarket totalCountPerMarket = new TotalCountPerMarket();
+    public Properties getStreamsConfig() {
+        Properties props = new Properties();
+        props.put(StreamsConfig.APPLICATION_ID_CONFIG, "market-summary");
+        props.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, "127.0.0.1:9092");
+        props.put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, Serdes.String().getClass());
+        props.put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, Serdes.String().getClass());
+        props.put(StreamsConfig.PRODUCER_PREFIX + ProducerConfig.INTERCEPTOR_CLASSES_CONFIG,
+                "io.confluent.monitoring.clients.interceptor.MonitoringProducerInterceptor");
+        props.put(StreamsConfig.CONSUMER_PREFIX + ConsumerConfig.INTERCEPTOR_CLASSES_CONFIG,
+                "io.confluent.monitoring.clients.interceptor.MonitoringConsumerInterceptor");
+        return props;
+    }
+
+    private void start() {
+        // start the stream
+        new KafkaStreams(builder.build(), this.getStreamsConfig()).start();
     }
 
 }
