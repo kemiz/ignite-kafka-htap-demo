@@ -15,10 +15,22 @@ public class Market implements Serializable {
     @QuerySqlField
     private double odds;
 
+    @QuerySqlField
+    private int totalCount;
+
     public Market(String id, String market, double odds) {
         this.id = id;
         this.market = market;
         this.odds = odds;
+        this.totalCount = 0;
+    }
+
+    public int getTotalCount() {
+        return totalCount;
+    }
+
+    public void setTotalCount(int totalCount) {
+        this.totalCount = totalCount;
     }
 
     public String getId() {
@@ -47,10 +59,11 @@ public class Market implements Serializable {
 
     @Override
     public String toString() {
-        return "{ market {" +
-                "id:" + id +
-                ", market:'" + market + '\'' +
-                ", odds:" + odds +
+        return "Market{" +
+                "id='" + id + '\'' +
+                ", market='" + market + '\'' +
+                ", odds=" + odds +
+                ", totalCount=" + totalCount +
                 '}';
     }
 }

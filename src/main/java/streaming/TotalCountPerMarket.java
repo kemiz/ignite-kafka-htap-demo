@@ -1,18 +1,13 @@
 package streaming;
 
 import com.google.gson.Gson;
-import dao.MarketDao;
 import model.Bet;
 import model.Market;
-import org.apache.ignite.Ignite;
-import org.apache.ignite.IgniteCache;
-import org.apache.ignite.Ignition;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.Serdes;
 import org.apache.kafka.streams.*;
 import org.apache.kafka.streams.kstream.*;
-import utils.IgniteConfigHelper;
 
 import java.util.ArrayList;
 import java.util.Properties;
@@ -49,8 +44,12 @@ public class TotalCountPerMarket {
                 .count()
                 .toStream()
                 /** join the market ids to the markets table and publish to new topic **/
-                .join(marketTable, (value1, value2) -> "Market: " + g.fromJson(value2, Market.class).getMarket() + ", Count: " + value1)
-                .through("Bet-Market-Selection-Feed")
+                .join(marketTable, (value1, value2) -> {
+                    Market market = g.fromJson(value2, Market.class);
+                    market.setTotalCount(StrictMath.toIntExact(value1));
+                    return g.toJson(market);
+                })
+                .through("Market-Count")
                 .peek((key, value) -> System.out.println(value));
 
         final Topology topology = builder.build();

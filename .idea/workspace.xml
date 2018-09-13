@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="807432e2-5f6c-416c-9ca3-9e8349e00882" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/StartIgniteMarketCountConsumer.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/consumer/IgniteMarketCountConsumer.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/query/Top3Markets.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StartIgniteConsumers.java" afterPath="$PROJECT_DIR$/src/main/java/StartIgniteBetConsumer.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Market.java" afterPath="$PROJECT_DIR$/src/main/java/model/Market.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/streaming/TotalCountPerMarket.java" afterPath="$PROJECT_DIR$/src/main/java/streaming/TotalCountPerMarket.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -28,21 +33,62 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TotalCountPerMarket.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TotalCountPerMarket.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/streaming/TotalCountPerMarket.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="41" column="34" lean-forward="true" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
+            <state relative-caret-position="200">
+              <caret line="48" column="59" lean-forward="false" selection-start-line="48" selection-start-column="59" selection-end-line="48" selection-end-column="59" />
               <folding>
-                <element signature="e#2195#2196#0" expanded="true" />
-                <element signature="e#2244#2245#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#2148#2149#0" expanded="true" />
+                <element signature="e#2197#2198#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StartIgniteConsumers.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/StartIgniteConsumers.java">
+      <file leaf-file-name="IgniteMarketCountConsumer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/consumer/IgniteMarketCountConsumer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="373">
+              <caret line="70" column="76" lean-forward="false" selection-start-line="70" selection-start-column="36" selection-end-line="70" selection-end-column="76" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Top3Markets.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/query/Top3Markets.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="8" lean-forward="false" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StartIgniteMarketCountConsumer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/StartIgniteMarketCountConsumer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MarketDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dao/MarketDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="23" column="43" lean-forward="false" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StartIgniteBetConsumer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/StartIgniteBetConsumer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
               <caret line="14" column="1" lean-forward="false" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
@@ -51,11 +97,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KafkaInitialDataLoader.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/load/KafkaInitialDataLoader.java">
+      <file leaf-file-name="StartBetDataStream.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/StartBetDataStream.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="64" column="94" lean-forward="false" selection-start-line="64" selection-start-column="94" selection-end-line="64" selection-end-column="94" />
+            <state relative-caret-position="34">
+              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoadInitialData.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/LoadInitialData.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -64,21 +120,11 @@
       <file leaf-file-name="Market.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/model/Market.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="48" column="29" lean-forward="false" selection-start-line="48" selection-start-column="29" selection-end-line="48" selection-end-column="29" />
+            <state relative-caret-position="339">
+              <caret line="59" column="13" lean-forward="true" selection-start-line="59" selection-start-column="13" selection-end-line="59" selection-end-column="13" />
               <folding>
-                <element signature="method#toString#0;class#Market#0" expanded="false" />
+                <element signature="method#Market#0;class#Market#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="clean-topics.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/clean-topics.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -108,8 +154,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/model/BetTransactionSummary.java" />
-        <option value="$PROJECT_DIR$/src/main/java/processor/UserTotalStakeAccumulator.java" />
         <option value="$PROJECT_DIR$/src/main/java/streaming/kafka/BetDataStreamGenerator.java" />
         <option value="$PROJECT_DIR$/src/main/java/serialization/UserDeserializer.java" />
         <option value="$PROJECT_DIR$/src/main/java/streaming/ignite/BetMultipleTupleExtractor.java" />
@@ -132,7 +176,6 @@
         <option value="$PROJECT_DIR$/src/main/java/consumer/IgniteBetConsumer.java" />
         <option value="$PROJECT_DIR$/src/main/java/query/TotalStakePerUser.java" />
         <option value="$PROJECT_DIR$/src/main/java/load/IgniteInitialDataLoader.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/Market.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/MarketCount.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/MarketDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/User.java" />
@@ -142,7 +185,6 @@
         <option value="$PROJECT_DIR$/src/main/java/load/KafkaInitialDataLoader.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/Bet.java" />
         <option value="$PROJECT_DIR$/src/main/java/producer/BetDataStreamGenerator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/query/Top3Markets.java" />
         <option value="$PROJECT_DIR$/src/main/resources/clean-topics.sh" />
         <option value="$PROJECT_DIR$/scripts/clean-topics.sh" />
         <option value="$PROJECT_DIR$/scripts/Start-Confluent.sh" />
@@ -158,7 +200,11 @@
         <option value="$PROJECT_DIR$/src/main/java/IgniteKVStore.java" />
         <option value="$PROJECT_DIR$/src/main/java/streaming/IgniteKVStore.java" />
         <option value="$PROJECT_DIR$/src/main/java/statestore/IgniteKVStore.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/Market.java" />
+        <option value="$PROJECT_DIR$/src/main/java/StartIgniteMarketCountConsumer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/consumer/IgniteMarketCountConsumer.java" />
         <option value="$PROJECT_DIR$/src/main/java/streaming/TotalCountPerMarket.java" />
+        <option value="$PROJECT_DIR$/src/main/java/query/Top3Markets.java" />
       </list>
     </option>
   </component>
@@ -379,9 +425,10 @@
     <property name="extract.method.default.visibility" value="public" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="dao" />
-      <recent name="model" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/scripts" />
+      <recent name="$PROJECT_DIR$/../ignite-kafka-streamer-betting-demo/src/main/java/ignite" />
+      <recent name="$PROJECT_DIR$/../ignite-kafka-streamer-betting-demo/src/main/java" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
@@ -392,14 +439,14 @@
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="query" />
-      <recent name="dao" />
       <recent name="" />
+      <recent name="consumer" />
+      <recent name="dao" />
       <recent name="serialization" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/scripts" />
-      <recent name="$PROJECT_DIR$/../ignite-kafka-streamer-betting-demo/src/main/java/ignite" />
-      <recent name="$PROJECT_DIR$/../ignite-kafka-streamer-betting-demo/src/main/java" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="dao" />
+      <recent name="model" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -414,7 +461,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.TotalCountPerMarket">
+  <component name="RunManager" selected="Application.Top3UsersByStake">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -422,9 +469,9 @@
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <module />
     </configuration>
-    <configuration name="LoadInitialData" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="StartBetDataStream" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="LoadInitialData" />
+      <option name="MAIN_CLASS_NAME" value="StartBetDataStream" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -436,28 +483,28 @@
       <module name="online-betting-example" />
       <envs />
     </configuration>
-    <configuration name="MarketsSummary" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="StartIgniteMarketCountConsumer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="StartIgniteMarketCountConsumer" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="online-betting-example" />
+      <envs />
+    </configuration>
+    <configuration name="Top3Markets" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="statestore.*" />
+          <option name="PATTERN" value="query.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="streaming.MarketsSummary" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="online-betting-example" />
-      <envs />
-    </configuration>
-    <configuration name="StartIgniteServerNode" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="StartIgniteServerNode" />
+      <option name="MAIN_CLASS_NAME" value="query.Top3Markets" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -582,19 +629,19 @@
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.LoadInitialData" />
-      <item index="1" class="java.lang.String" itemvalue="Application.MarketsSummary" />
-      <item index="2" class="java.lang.String" itemvalue="Application.StartIgniteServerNode" />
-      <item index="3" class="java.lang.String" itemvalue="Application.Top3UsersByStake" />
-      <item index="4" class="java.lang.String" itemvalue="Application.TotalCountPerMarket" />
+      <item index="0" class="java.lang.String" itemvalue="Application.TotalCountPerMarket" />
+      <item index="1" class="java.lang.String" itemvalue="Application.StartBetDataStream" />
+      <item index="2" class="java.lang.String" itemvalue="Application.StartIgniteMarketCountConsumer" />
+      <item index="3" class="java.lang.String" itemvalue="Application.Top3Markets" />
+      <item index="4" class="java.lang.String" itemvalue="Application.Top3UsersByStake" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.TotalCountPerMarket" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Top3UsersByStake" />
-        <item index="2" class="java.lang.String" itemvalue="Application.LoadInitialData" />
-        <item index="3" class="java.lang.String" itemvalue="Application.StartIgniteServerNode" />
-        <item index="4" class="java.lang.String" itemvalue="Application.MarketsSummary" />
+        <item index="0" class="java.lang.String" itemvalue="Application.Top3UsersByStake" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Top3Markets" />
+        <item index="2" class="java.lang.String" itemvalue="Application.TotalCountPerMarket" />
+        <item index="3" class="java.lang.String" itemvalue="Application.StartIgniteMarketCountConsumer" />
+        <item index="4" class="java.lang.String" itemvalue="Application.StartBetDataStream" />
       </list>
     </recent_temporary>
   </component>
@@ -619,6 +666,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="45" y="22" width="1636" height="1028" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -628,7 +676,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31511253" sideWeight="0.50564617" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293601" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3129689" sideWeight="0.49435383" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3129689" sideWeight="0.49435383" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3965702" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -782,24 +830,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/MarketCount.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Market.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="48" column="29" lean-forward="false" selection-start-line="48" selection-start-column="29" selection-end-line="48" selection-end-column="29" />
-          <folding>
-            <element signature="method#toString#0;class#Market#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/LoadInitialData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/UserDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -848,31 +878,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/producer/BetDataStreamGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="71" column="38" lean-forward="false" selection-start-line="71" selection-start-column="38" selection-end-line="71" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/MarketDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="23" column="43" lean-forward="false" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
-          <folding>
-            <element signature="e#342#343#0" expanded="false" />
-            <element signature="e#403#404#0" expanded="false" />
-            <element signature="e#455#456#0" expanded="false" />
-            <element signature="e#503#504#0" expanded="false" />
-            <element signature="e#547#548#0" expanded="false" />
-            <element signature="e#607#608#0" expanded="false" />
-            <element signature="e#642#643#0" expanded="false" />
-            <element signature="e#688#689#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/StartIgniteServerNode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -909,14 +914,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="116">
           <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/query/Top3Markets.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="20" column="48" lean-forward="false" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
           <folding />
         </state>
       </provider>
@@ -1002,22 +999,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/StartIgniteConsumers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="14" column="1" lean-forward="false" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/StartBetDataStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-streams/2.0.0/kafka-streams-2.0.0-sources.jar!/org/apache/kafka/streams/processor/internals/AbstractProcessorContext.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-567">
@@ -1039,37 +1020,89 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/streaming/TotalCountPerMarket.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/statestore/IgniteKVStore.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/producer/BetDataStreamGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="41" column="34" lean-forward="true" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
+        <state relative-caret-position="203">
+          <caret line="71" column="38" lean-forward="false" selection-start-line="71" selection-start-column="38" selection-end-line="71" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/MarketDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="23" column="43" lean-forward="false" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/Market.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="59" column="13" lean-forward="true" selection-start-line="59" selection-start-column="13" selection-end-line="59" selection-end-column="13" />
           <folding>
-            <element signature="e#2195#2196#0" expanded="true" />
-            <element signature="e#2244#2245#0" expanded="true" />
+            <element signature="method#Market#0;class#Market#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/statestore/IgniteKVStore.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/StartIgniteBetConsumer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state relative-caret-position="204">
+          <caret line="14" column="1" lean-forward="false" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/StartBetDataStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/LoadInitialData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/StartIgniteMarketCountConsumer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="9" column="38" lean-forward="false" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
+        <state relative-caret-position="34">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/streaming/TotalCountPerMarket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="48" column="59" lean-forward="false" selection-start-line="48" selection-start-column="59" selection-end-line="48" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2148#2149#0" expanded="true" />
+            <element signature="e#2197#2198#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/consumer/IgniteMarketCountConsumer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="76" column="13" lean-forward="false" selection-start-line="76" selection-start-column="13" selection-end-line="76" selection-end-column="13" />
+        <state relative-caret-position="373">
+          <caret line="70" column="76" lean-forward="false" selection-start-line="70" selection-start-column="36" selection-end-line="70" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/query/Top3Markets.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="8" lean-forward="false" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
           <folding />
         </state>
       </provider>

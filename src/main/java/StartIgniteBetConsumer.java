@@ -2,7 +2,7 @@ import consumer.IgniteBetConsumer;
 
 import java.net.UnknownHostException;
 
-public class StartIgniteConsumers {
+public class StartIgniteBetConsumer {
 
     public static void main (String... args){
         try {
