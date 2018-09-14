@@ -18,7 +18,6 @@ public class Top3Markets {
 
         IgniteCache<Long, User> userCache = ignite.cache(IgniteConfigHelper.MARKET_CACHE);
 
-        // Execute query to get names of all employees.
         SqlFieldsQuery sql = new SqlFieldsQuery(
                 "select top 3 market, totalcount from Market order by totalcount desc");
 

@@ -17,11 +17,9 @@ public class Top3UsersByStake {
     public static void main(String[] args) throws InterruptedException {
         IgniteConfiguration cfg = IgniteConfigHelper.getIgniteClientConfig();
         Ignite ignite = Ignition.start(cfg);
-        UserDao userDao = new UserDao(ignite);
 
         IgniteCache<Long, User> userCache = ignite.cache(IgniteConfigHelper.USER_CACHE);
 
-        // Execute query to get names of all employees.
         SqlFieldsQuery sql = new SqlFieldsQuery(
                 "select top 3 name, stake from User order by stake desc");
 
