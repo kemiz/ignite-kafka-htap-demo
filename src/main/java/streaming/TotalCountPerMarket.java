@@ -33,6 +33,7 @@ public class TotalCountPerMarket {
                 for (int i = 0; i < markets.size(); i++) marketList.add(new KeyValue<>(markets.get(i), markets.get(i)));
                 return marketList;
             } catch (Exception e) {
+                // In case we have bad data
                 marketList.add(new KeyValue<>("-1", "null"));
                 return marketList;
             }
