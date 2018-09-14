@@ -33,7 +33,7 @@ public class TotalCountPerMarket {
                 for (int i = 0; i < markets.size(); i++) marketList.add(new KeyValue<>(markets.get(i), markets.get(i)));
                 return marketList;
             } catch (Exception e) {
-                marketList.add(new KeyValue<>("0", "null"));
+                marketList.add(new KeyValue<>("-1", "null"));
                 return marketList;
             }
         });
@@ -42,13 +42,13 @@ public class TotalCountPerMarket {
                 /** group by key, count and create a new stream **/
                 .groupByKey()
                 .count()
-                .toStream()
+//                .toStream()
                 /** join the market ids to the markets table and publish to new topic **/
                 .join(marketTable, (value1, value2) -> {
                     Market market = g.fromJson(value2, Market.class);
                     market.setTotalCount(StrictMath.toIntExact(value1));
                     return g.toJson(market);
-                })
+                }).toStream()
                 .through("Market-Count")
                 .peek((key, value) -> System.out.println(value));
 

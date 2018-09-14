@@ -68,7 +68,9 @@ public class IgniteMarketCountConsumer {
             ConsumerRecords<String, String> records = consumer.poll(100);
             for (ConsumerRecord<String, String> record : records) {
                 System.out.printf("offset = %d, key = %s, value = %s%n", record.offset(), record.key(), record.value());
-                marketDao.addMarket(g.fromJson(record.value(), Market.class));
+                Market m = marketDao.getMarketById(g.fromJson(record.value(), Market.class).getId());
+                m.setTotalCount(g.fromJson(record.value(), Market.class).getTotalCount());
+                marketDao.addMarket(m);
             }
         }
     }

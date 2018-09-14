@@ -1,4 +1,4 @@
-package streaming;
+package statestore;
 
 import org.apache.ignite.Ignite;
 import org.apache.ignite.IgniteCache;
