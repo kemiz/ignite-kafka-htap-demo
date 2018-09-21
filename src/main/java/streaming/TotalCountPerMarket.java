@@ -24,7 +24,7 @@ public class TotalCountPerMarket {
         KStream<String, String> betStream = builder.stream("Bets");
         KTable<String, String> marketTable = builder.table("Markets");
 
-        Gson g = new Gson();
+        son g = new Gson();
 
         KStream<String, String> marketStream = betStream.flatMap((KeyValueMapper<String, String, Iterable<KeyValue<String, String>>>) (key, value) -> {
             ArrayList<KeyValue<String, String>> marketList = new ArrayList<>();
@@ -43,13 +43,13 @@ public class TotalCountPerMarket {
                 /** group by key, count and create a new stream **/
                 .groupByKey()
                 .count()
-//                .toStream()
                 /** join the market ids to the markets table and publish to new topic **/
                 .join(marketTable, (value1, value2) -> {
                     Market market = g.fromJson(value2, Market.class);
                     market.setTotalCount(StrictMath.toIntExact(value1));
                     return g.toJson(market);
-                }).toStream()
+                })
+                .toStream()
                 .through("Market-Count")
                 .peek((key, value) -> System.out.println(value));
 

@@ -1,7 +1,6 @@
 package query;
 
 import model.Market;
-import model.User;
 import org.apache.ignite.Ignite;
 import org.apache.ignite.IgniteCache;
 import org.apache.ignite.Ignition;
