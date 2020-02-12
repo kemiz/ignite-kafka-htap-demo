@@ -1,9 +1,6 @@
-# Online Betting Demo
+# HTAP Demo
 
-Simple demo that demonstrates an online betting app performing both transactions analytics.
-
- - Ignite is used as the transactional store and SQL analytics
- - Kafka is used as the messaging layer and KStreams for analytics
+Simple demo simulating sports bet placement. Ignite handles the bet transactions delivered via Kafka and Ignite SQL and KStreams are used for real-time analytics.
  
 ## Running the demo
 
@@ -16,7 +13,8 @@ In the scripts folder:
 
  - Start Confluent / Kafka platform
  - Start ignite node
+ - Load initial data
  - Start ignite consumers
  - Start bet stream generator
  - Start total count per market 
- - Run top3 scripts
+ - Run any of the top3 scripts
